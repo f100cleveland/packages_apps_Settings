@@ -49,6 +49,12 @@
         android:fragment="com.android.settings.screwd.Lockscreen"
         android:title="@string/lockscreen"/>
     
+    <!-- IME Settings -->	
+    <PreferenceScreen
+        android:key="keyboard_input_settings"
+        android:fragment="com.android.settings.screwd.InputMethodsSettings"
+        android:title="@string/title_keyboard_input" />
+    
     <!-- Misc -->	
     <PreferenceScreen
     	android:key="misc"
