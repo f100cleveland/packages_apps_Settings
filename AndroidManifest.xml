@@ -1917,7 +1917,8 @@
                 android:resource="@id/notification_settings" />
         </activity>
 
-		<activity android:name=".screwd.Density" />
+	<activity android:name=".screwd.InitD" />
+	<activity android:name=".screwd.Density" />
 
         <!-- Show apps for which application-level notification settings are applicable -->
         <activity android:name="Settings$NotificationAppListActivity"
