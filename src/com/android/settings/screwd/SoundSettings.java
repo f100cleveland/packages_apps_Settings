@@ -54,8 +54,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String TAG = "SoundSettings";
 	
 	private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
+	private static final String KEY_VOL_MEDIA = "volume_keys_control_media_stream";
 		
     private SwitchPreference mVolumeRockerWake;
+	private SwitchPreference mVolumeKeysControlMedia;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -71,6 +73,12 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         int volumeRockerWake = Settings.System.getInt(getContentResolver(),
                 VOLUME_ROCKER_WAKE, 0);
         mVolumeRockerWake.setChecked(volumeRockerWake != 0);
+		
+		// control media anytime
+        mVolumeKeysControlMedia = (SwitchPreference) findPreference(KEY_VOL_MEDIA);
+        mVolumeKeysControlMedia.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.VOLUME_KEYS_CONTROL_MEDIA_STREAM, 0) != 0);
+        mVolumeKeysControlMedia.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -90,6 +98,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.System.putInt(getContentResolver(), VOLUME_ROCKER_WAKE,
                     value ? 1 : 0);
+		} else if (preference == mVolumeKeysControlMedia) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.VOLUME_KEYS_CONTROL_MEDIA_STREAM,
+                    (Boolean) objValue ? 1 : 0);
+            return true;			
        	}
         return true;
     }
