@@ -263,5 +263,8 @@
     <string name="debug_LAN_category">LAN Settings</string>    
     <!-- Hostname setting -->
     <string name="device_hostname">Device hostname</string>
+    
+    <!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
+    <string name="bluetooth_accept_all_files">Accept all file types</string>
 
 </resources>
