@@ -91,7 +91,13 @@
                 android:title="@string/toast_animation_title"
                 android:entries="@array/toast_animation_entries"
                 android:entryValues="@array/toast_animation_values"
-                android:persistent="false" />		
+                android:persistent="false" />
+		
+	<com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        	android:key="double_tap_sleep_gesture"
+                android:title="@string/double_tap_to_sleep_title"
+                android:summary="@string/double_tap_to_sleep_summary"
+                android:defaultValue="true" />			
 
         <PreferenceScreen
                 android:key="wifi_display"
