@@ -16,7 +16,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- About phone screen, Screw'd version name-->
-    <string name="mod_version">Screw'd version</string>
+    <string name="mod_version">Screw\'d version</string>
     <!-- About phone screen, Screw'd unknown name-->
     <string name="mod_version_default">Unknown</string>
     <!-- About phone screen, build date of ROM -->
