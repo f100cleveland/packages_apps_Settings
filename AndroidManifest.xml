@@ -1955,6 +1955,9 @@
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
                 android:value="true" />
         </activity>
+	
+	<!-- Screw'd Activities -->
+	<activity android:name=".screwd.SpamList" />
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
