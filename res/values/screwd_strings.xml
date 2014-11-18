@@ -1248,4 +1248,8 @@
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
     <string name="color_default">Default</string>
+    
+    <!-- Instant reboot -->
+    <string name="advanced_reboot_oneclick">One click reboot</string>
+    <string name="advanced_reboot_oneclick_summary">Instantly trigger reboot action</string>
 </resources>
