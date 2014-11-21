@@ -51,7 +51,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.slim_sound_settings);
+        addPreferencesFromResource(R.xml.screwd_sound_settings);
 
         mSafeHeadsetVolume = (SwitchPreference) findPreference(KEY_SAFE_HEADSET_VOLUME);
         mSafeHeadsetVolume.setChecked(Settings.System.getInt(getContentResolver(),
