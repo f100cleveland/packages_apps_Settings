@@ -316,7 +316,7 @@
     <PreferenceCategory android:key="debug_LAN_category"
             android:title="@string/debug_LAN_category">
 
-        <com.android.settings.slim.HostnamePreference
+        <com.android.settings.screwd.HostnamePreference
             android:key="device_hostname"
             android:title="@string/device_hostname"
             android:dialogTitle="@string/device_hostname"
