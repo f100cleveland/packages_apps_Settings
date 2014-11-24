@@ -511,7 +511,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
             Toast.makeText(getActivity(), "Toast animation test!!!",
                     Toast.LENGTH_SHORT).show();
-        
+        }
 
         return true;
     }
