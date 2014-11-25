@@ -51,5 +51,10 @@
         android:summary="@string/status_bar_custom_header_default_summary"
         android:dependency="status_bar_custom_header"
         android:defaultValue="false"/> 	
-		 	
+      
+      <com.android.settings.screwd.SystemSettingSwitchPreference
+           android:key="status_bar_brightness_control"
+           android:title="@string/status_bar_toggle_brightness"
+           android:summary="@string/status_bar_toggle_brightness_summary"
+           android:defaultValue="false" />		 	
 </PreferenceScreen>
