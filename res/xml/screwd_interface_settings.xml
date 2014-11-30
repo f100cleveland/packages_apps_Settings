@@ -33,6 +33,12 @@
     <PreferenceScreen
     	android:key="battery_style"
         android:fragment="com.android.settings.screwd.BatteryIconStyle"
-        android:title="@string/status_bar_battery_cat_title" />			    	
+        android:title="@string/status_bar_battery_cat_title" />
+	
+    <com.android.settings.screwd.SystemSettingSwitchPreference
+        android:key="recents_show_hide_search_bar"
+        android:title="@string/recents_show_searchbar"
+        android:summary="@string/recents_show_searchbar_summary"
+        android:defaultValue="false" />				    	
 
 </PreferenceScreen>
