@@ -144,7 +144,7 @@ public class BatteryIconStyle extends SettingsPreferenceFragment
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case MENU_RESET:
-                showDialogInner(DLG_RESET);
+                //showDialogInner(DLG_RESET);
                 return true;
              default:
                 return super.onContextItemSelected(item);
