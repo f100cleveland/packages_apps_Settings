@@ -25,16 +25,7 @@
             android:fragment="com.android.settings.slim.privacyguard.PrivacyGuardManager"
             android:key="privacy_guard_manager"
             android:summary="@string/privacy_guard_manager_summary"
-            android:title="@string/privacy_guard_manager_title" />
-
-        <PreferenceScreen
-            android:title="@string/block_notifications_title"
-            android:fragment="com.android.settings.screwd.SpamList" />
-	    
-	<PreferenceScreen
-            android:key="hfm_settings"
-            android:title="@string/hfm_pref_screen_title"
-            android:fragment="com.android.settings.screwd.hfm.HfmSettings" />   
+            android:title="@string/privacy_guard_manager_title" />   
 
     </PreferenceCategory>
 

@@ -260,5 +260,44 @@
                 />
 
     </dashboard-category>
+    
+    <!-- Screw'd Settings -->
+    <dashboard-category
+        android:id="@+id/screwd_settings"
+        android:title="@string/header_category_screwd" >
+	
+	<!-- User interface -->
+        <dashboard-tile
+                android:id="@+id/screwd_ui"
+                android:icon="@drawable/ic_settings_interface"
+                android:fragment="com.android.settings.screwd.InterfaceSettings"
+                android:title="@string/ui"
+                />
+		
+	<!-- System -->
+        <dashboard-tile
+                android:id="@+id/screwd_system"
+                android:icon="@drawable/ic_settings_interface"
+                android:fragment="com.android.settings.screwd.System"
+                android:title="@string/system"
+                />
+		
+	<!-- Notifications -->
+        <dashboard-tile
+                android:id="@+id/screwd_notifications"
+                android:icon="@drawable/ic_settings_interface"
+                android:fragment="com.android.settings.screwd.Notifications"
+                android:title="@string/notifications"
+                />
+		
+	<!-- Misc -->
+        <dashboard-tile
+                android:id="@+id/screwd_misc"
+                android:icon="@drawable/ic_settings_interface"
+                android:fragment="com.android.settings.screwd.Misc"
+                android:title="@string/misc"
+                />			
+	
+     </dashboard-category>	
 
 </dashboard-categories>

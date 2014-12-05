@@ -1,5 +1,4 @@
 /*
- * Copyright (C) 2013 SlimRoms
  * Copyright (C) 2014 Screw'd Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,67 +16,37 @@
 
 package com.android.settings.screwd;
 
-import com.android.settings.notification.DropDownPreference;
-import com.android.settings.notification.DropDownPreference.Callback;
-import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settings.search.Indexable;
-
-import android.app.Activity;
 import android.app.ActivityManager;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.SystemProperties;
 import android.provider.Settings;
-import android.preference.ListPreference;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.PreferenceCategory;
 import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.SwitchPreference;
-import android.provider.SearchIndexableResource;
-
-import android.text.TextUtils;
-import android.widget.Toast;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class InterfaceSettings extends SettingsPreferenceFragment implements
+public class Notifications extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
-		
-		
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        addPreferencesFromResource(R.xml.screwd_interface_settings);
-		
-		
+        addPreferencesFromResource(R.xml.screwd_notifications_settings);
 
     }
-	
-	
 
     @Override
     public void onResume() {
         super.onResume();
     }
-	
-	
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-		
         return false;
     }
-	
-
 }
