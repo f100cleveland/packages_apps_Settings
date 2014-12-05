@@ -285,7 +285,7 @@
 	<!-- Notifications -->
         <dashboard-tile
                 android:id="@+id/screwd_notifications"
-                android:icon="@drawable/ic_settings_interface"
+                android:icon="@drawable/ic_settings_screwd_notifications"
                 android:fragment="com.android.settings.screwd.Notifications"
                 android:title="@string/notifications"
                 />
@@ -293,7 +293,7 @@
 	<!-- Misc -->
         <dashboard-tile
                 android:id="@+id/screwd_misc"
-                android:icon="@drawable/ic_settings_interface"
+                android:icon="@drawable/ic_settings_screwd_misc"
                 android:fragment="com.android.settings.screwd.Misc"
                 android:title="@string/misc"
                 />			
