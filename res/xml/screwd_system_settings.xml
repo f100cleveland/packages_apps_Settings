@@ -19,9 +19,16 @@
     android:title="@string/misc"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
     
+    <!-- Ad blocker -->
     <PreferenceScreen
-            android:key="hfm_settings"
-            android:title="@string/hfm_pref_screen_title"
-            android:fragment="com.android.settings.screwd.hfm.HfmSettings" />	
+    	android:key="hfm_settings"
+        android:title="@string/hfm_pref_screen_title"
+        android:fragment="com.android.settings.screwd.hfm.HfmSettings" />
+	    
+    <!-- Density Changer -->
+    <PreferenceScreen
+        android:key="density_changer"
+        android:title="@string/lcd_density_title"
+        android:fragment="com.android.settings.screwd.Density" />    	
 
 </PreferenceScreen>
