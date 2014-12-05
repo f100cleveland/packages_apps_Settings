@@ -277,7 +277,7 @@
 	<!-- System -->
         <dashboard-tile
                 android:id="@+id/screwd_system"
-                android:icon="@drawable/ic_settings_interface"
+                android:icon="@drawable/ic_settings_screwd_system"
                 android:fragment="com.android.settings.screwd.System"
                 android:title="@string/system"
                 />
