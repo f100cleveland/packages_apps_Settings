@@ -18,7 +18,40 @@
     android:title="@string/lockscreen"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:key="locksystem_category"
+        android:title="@string/lockscreen_shortcuts_cat">
 
+        <PreferenceScreen
+                 android:key="lockscreen_shortcuts"
+                 android:fragment="com.android.settings.slim.dslv.ActionListViewSettings"
+                 android:summary="@string/lockscreen_shortcuts_summary"
+                 android:title="@string/lockscreen_shortcuts_title">
+             <extra android:name="actionMode" android:value="4" />
+             <extra android:name="maxAllowedActions" android:value="5" />
+             <extra android:name="disableLongpress" android:value="true" />
+             <extra android:name="useAppPickerOnly" android:value="true" />
+             <extra android:name="fragment" android:value="com.android.settings.slim.fragments.LockscreenShortcutFragment" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="lockscreen_wallpaper"
+        android:title="@string/lockscreen_wallpaper_title" >
+
+        <Preference
+            android:key="lockscreen_wallpaper_set"
+            android:title="@string/lockscreen_wallpaper_set_title"
+            android:persistent="false"/>
+
+        <Preference
+            android:key="lockscreen_wallpaper_clear"
+            android:title="@string/lockscreen_wallpaper_clear_title"
+            android:persistent="false"/>
+
+    </PreferenceCategory>
+    
     <PreferenceCategory
         android:key="lockscreen_weather_cat"
         android:title="@string/lockscreen_options_title" >
@@ -49,22 +82,6 @@
                 android:key="lockscreen_weather"
                 android:title="@string/lock_screen_weather_settings_title"
                 android:fragment="com.android.settings.screwd.LockScreenWeatherSettings" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="lockscreen_wallpaper"
-        android:title="@string/lockscreen_wallpaper_title" >
-
-        <Preference
-            android:key="lockscreen_wallpaper_set"
-            android:title="@string/lockscreen_wallpaper_set_title"
-            android:persistent="false"/>
-
-        <Preference
-            android:key="lockscreen_wallpaper_clear"
-            android:title="@string/lockscreen_wallpaper_clear_title"
-            android:persistent="false"/>
 
     </PreferenceCategory>
 
