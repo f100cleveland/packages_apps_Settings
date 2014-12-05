@@ -269,7 +269,7 @@
 	<!-- User interface -->
         <dashboard-tile
                 android:id="@+id/screwd_ui"
-                android:icon="@drawable/ic_settings_interface"
+                android:icon="@drawable/ic_settings_screwd_ui"
                 android:fragment="com.android.settings.screwd.InterfaceSettings"
                 android:title="@string/ui"
                 />
