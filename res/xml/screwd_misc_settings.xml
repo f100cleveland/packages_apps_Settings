@@ -19,6 +19,10 @@
     android:title="@string/misc"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
     
+    <CheckBoxPreference
+    	android:key="kill_app_longpress_back"
+	android:title="@string/kill_app_longpress_back"
+	android:summary="@string/kill_app_longpress_back_summary"/> 
 
 
 </PreferenceScreen>
