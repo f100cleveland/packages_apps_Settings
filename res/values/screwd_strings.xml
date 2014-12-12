@@ -21,7 +21,6 @@
     <string name="system">System</string>
     <string name="notifications">Notifications</string>
     <string name="misc">Misc</string>
-    <string name="performance_settings">Performance Control</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>

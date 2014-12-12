@@ -68,7 +68,6 @@
                 android:fragment="com.android.settings.WirelessSettings"
                 android:icon="@drawable/ic_settings_more"
                 />
-
     </dashboard-category>
 
     <!-- DEVICE -->
@@ -243,13 +242,6 @@
                 android:targetPackage="eu.chainfire.supersu"
                 android:targetClass="eu.chainfire.supersu.MainActivity" />
         </dashboard-tile>
-
-        <!-- PerformanceControl -->
-        <dashboard-tile
-                android:id="@+id/performance_controls"
-                android:fragment="com.brewcrewfoo.performance.activities.MainActivity"
-                android:icon="@drawable/ic_settings_performance"
-                android:title="@string/performance_settings" />
 
         <!-- About Device -->
         <dashboard-tile
