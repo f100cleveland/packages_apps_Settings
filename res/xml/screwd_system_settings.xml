@@ -23,6 +23,6 @@
     <PreferenceScreen
     	android:key="power_menu"
         android:title="@string/power_menu"
-        android:fragment="com.android.settings.screwd.PowerMenu" /> 				
+        android:fragment="com.android.settings.screwd.PowerMenuActions" /> 				
 
 </PreferenceScreen>
