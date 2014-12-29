@@ -327,5 +327,9 @@
     <string name="display_rotation_90_title">90 degrees</string>
     <string name="display_rotation_180_title">180 degrees</string>
     <string name="display_rotation_270_title">270 degrees</string>
+    
+    <!-- EdgeGesture service -->
+    <string name="edge_gesture_service_title">Block gesture touch events</string>
+    <string name="edge_gesture_service_summary">Don\'t send touch events for navigation and status bar gestures to apps</string>
 
 </resources>
