@@ -35,7 +35,11 @@
         android:fragment="com.android.settings.screwd.Recents"
         android:title="@string/recents" />
 	
-     <!-- Gesture anywhere -->
+    <PreferenceScreen
+    	android:key="battery_bar"
+        android:fragment="com.android.settings.screwd.BatteryBar"
+        android:title="@string/battery_bar" />
+    
     <PreferenceScreen
      	android:key="gesture_anywhere"
         android:fragment="com.android.settings.screwd.gestureanywhere.GestureAnywhereSettings"
