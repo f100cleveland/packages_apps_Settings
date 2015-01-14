@@ -87,6 +87,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_DEVICE_REAR_CAMERA = "device_rear_camera";
     private static final String KEY_DEVICE_FRONT_CAMERA = "device_front_camera";
     private static final String KEY_DEVICE_SCREEN_RESOLUTION = "device_screen_resolution";
+	private static final String KEY_UBER_AND = "uber_android";
+    private static final String KEY_UBER_KERNEL = "uber_kernel";
+    private static final String KEY_UBER_FLAGS = "uber_flags";
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
     long[] mHits = new long[3];
@@ -136,6 +139,12 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         findPreference(KEY_KERNEL_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_VERSION, "ro.screwd.version");
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
+		findPreference(KEY_UBER_KERNEL).setEnabled(true);
+        findPreference(KEY_UBER_FLAGS).setEnabled(true);
+		setValueSummary(KEY_UBER_AND, "ro.uber.android");
+        setValueSummary(KEY_UBER_KERNEL, "ro.uber.kernel");
+        setValueSummary(KEY_UBER_FLAGS, "ro.uber.flags");
+		
 
         addStringPreference(KEY_DEVICE_CHIPSET,
                 SystemProperties.get("ro.device.chipset", null));
