@@ -33,6 +33,12 @@
     <PreferenceScreen
         android:key="recents"
         android:fragment="com.android.settings.screwd.Recents"
-        android:title="@string/recents" />							    	
+        android:title="@string/recents" />
+	
+     <!-- Gesture anywhere -->
+    <PreferenceScreen
+     	android:key="gesture_anywhere"
+        android:fragment="com.android.settings.screwd.gestureanywhere.GestureAnywhereSettings"
+        android:title="@string/gesture_anywhere_title" />	  							    	
 
 </PreferenceScreen>

@@ -1916,7 +1916,8 @@
 	
 	<!-- Screw'd Activities -->
 	<activity android:name=".screwd.NavBarDimen" />
-
+        <activity android:name=".screwd.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".screwd.gestureanywhere.GestureAnywhereCreateGestureActivity" />   
 
         <!-- Development settings -->
 
