@@ -55,6 +55,12 @@
         	android:defaultValue="true" />	
 	</PreferenceCategory>
 	
+	<!-- Heads up -->
+        <com.android.settings.screwd.GlobalSettingSwitchPreference
+            android:key="heads_up_notifications_enabled"
+            android:title="@string/heads_up_notifications"
+            android:summaryOn="@string/summary_heads_up_enabled"
+            android:summaryOff="@string/summary_heads_up_disabled" />
 	
 	<!-- Pulse notification light -->
         <PreferenceScreen
