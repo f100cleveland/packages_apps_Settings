@@ -62,6 +62,7 @@ public class Navbar extends SettingsPreferenceFragment implements
     private static final String DIM_NAV_BUTTONS_ANIMATE = "dim_nav_buttons_animate";
     private static final String DIM_NAV_BUTTONS_ANIMATE_DURATION = "dim_nav_buttons_animate_duration";
     private static final String DIM_NAV_BUTTONS_TOUCH_ANYWHERE = "dim_nav_buttons_touch_anywhere";
+    private static final String STATUS_BAR_IME_ARROWS = "status_bar_ime_arrows";
 
     private SwitchPreference mKillAppLongPressBack;
     private SwitchPreference mDimNavButtons;
@@ -70,6 +71,7 @@ public class Navbar extends SettingsPreferenceFragment implements
     private SwitchPreference mDimNavButtonsAnimate;
     private SlimSeekBarPreference mDimNavButtonsAnimateDuration;
     private SwitchPreference mDimNavButtonsTouchAnywhere;
+    private SwitchPreference mStatusBarImeArrows;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -88,6 +90,12 @@ public class Navbar extends SettingsPreferenceFragment implements
         int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
                 KILL_APP_LONGPRESS_BACK, 0);
         mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
+
+        // nav bar cursor
+        mStatusBarImeArrows = (SwitchPreference) findPreference(STATUS_BAR_IME_ARROWS);
+        mStatusBarImeArrows.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_IME_ARROWS, 0) == 1);
+        mStatusBarImeArrows.setOnPreferenceChangeListener(this);
 
         // SlimDim
         mDimNavButtons = (SwitchPreference) findPreference(DIM_NAV_BUTTONS);
@@ -182,6 +190,11 @@ public class Navbar extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.Secure.putInt(getContentResolver(), KILL_APP_LONGPRESS_BACK,
                     value ? 1 : 0);
+            return true;
+        } else if (preference == mStatusBarImeArrows) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_IME_ARROWS,
+                    ((Boolean) newValue) ? 1 : 0);
             return true;
         } else if (preference == mDimNavButtons) {
             Settings.System.putInt(getActivity().getContentResolver(),
