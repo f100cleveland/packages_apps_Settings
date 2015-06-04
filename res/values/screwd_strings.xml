@@ -1357,5 +1357,9 @@
     <string name="maintainer_default">Unknown</string>
     <string name="maintainer_default_summary">Sorry, there is no maintainer for this device!</string>
     <string name="devs">Developers</string>
+    
+    <!-- Navbar cursor buttons -->
+    <string name="show_ime_arrows_title">Show arrow keys while typing</string>
+    <string name="show_ime_arrows_summary">Display left and right cursor buttons for IME.</string>
    
 </resources>
