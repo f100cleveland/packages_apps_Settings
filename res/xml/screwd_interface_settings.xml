@@ -59,5 +59,10 @@
     	android:key="lcd_density"
         android:title="@string/lcd_density"
         android:persistent="false" />
-	    
+	
+    <PreferenceScreen
+    	android:key="pa_pie_control"
+        android:title="@string/pa_pie_control_title"
+        android:fragment="com.android.settings.paranoid.PieControl" /> 	
+   		    
 </PreferenceScreen>
