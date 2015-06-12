@@ -43,6 +43,12 @@
         android:fragment="com.android.settings.screwd.Traffic"
         android:title="@string/network_traffic_title" />
     
+    <PreferenceScreen
+           android:key="breathing_notifications"
+           android:fragment="com.android.settings.screwd.BreathingNotifications"
+           android:title="@string/breathing_notifications_title" 
+           android:summary="@string/breathing_notifications_summary" />
+    
     <com.android.settings.screwd.SystemSettingSwitchPreference
     	android:key="status_bar_notif_count"
         android:title="@string/status_bar_notif_count_title"
