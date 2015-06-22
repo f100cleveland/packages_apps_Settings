@@ -853,5 +853,10 @@
     <!-- Disable animations -->
     <string name="disable_animations">Disable animations</string>
     <string name="disable_animations_summary">Disables transition animations such as when launching an app</string>
+    
+    <!-- Keep screen on strings -->
+    <string name="keep_screen_on_never">Never</string>
+    <string name="keep_screen_on_debugging">While USB debugging</string>
+    <string name="keep_screen_on_charging">While charging</string>
 
 </resources>
