@@ -850,4 +850,8 @@
     <string name="lcd_density_default_value_format">%d DPI (default)</string>
     <string name="restarting_ui">Restarting UI\u2026</string>
 
+    <!-- Disable animations -->
+    <string name="disable_animations">Disable animations</string>
+    <string name="disable_animations_summary">Disables transition animations such as when launching an app</string>
+
 </resources>
