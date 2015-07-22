@@ -1397,5 +1397,9 @@
     <string name="smart_pulldown_persistent">No persistent</string>
     <string name="smart_pulldown_all">No dismissable or persistent</string>
 
-
+    <!-- Statusbar SCREW'D logo -->
+    <string name="status_bar_screwd_logo_title">Screw\'d logo</string>
+    <string name="status_bar_screwd_logo_summary">Enable to show Screw\'d  logo on the left side of statusbar</string>
+    <string name="status_bar_screwd_logo_color">Screw\'d logo color</string>
+    
 </resources>

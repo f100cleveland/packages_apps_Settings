@@ -49,6 +49,11 @@
            android:fragment="com.android.settings.screwd.Traffic"
            android:title="@string/network_traffic_title" />
 	
+	<Preference
+            android:key="screwd_logo"
+            android:fragment="com.android.settings.screwd.ScrewdLogo"
+            android:title="@string/status_bar_screwd_logo_title" />
+	
 	<com.android.settings.screwd.SystemSettingSwitchPreference
            android:key="status_bar_brightness_control"
            android:title="@string/status_bar_toggle_brightness"
