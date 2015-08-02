@@ -64,9 +64,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 	
 	private static final String SHOW_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String PREF_CUSTOM_HEADER_DEFAULT = "status_bar_custom_header_default";
+	private static final String STATUS_BAR_TEMPERATURE_STYLE = "status_bar_temperature_style";
 
     private ListPreference mShowCarrierLabel;
     private SwitchPreference mCustomHeader;
+	private ListPreference mStatusBarTemperature;
 	
 
     @Override
@@ -107,6 +109,14 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mCustomHeader.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.STATUS_BAR_CUSTOM_HEADER_DEFAULT, 0) == 1));
         mCustomHeader.setOnPreferenceChangeListener(this);
+		
+		// Status bar temp
+        mStatusBarTemperature = (ListPreference) findPreference(STATUS_BAR_TEMPERATURE_STYLE);
+        int temperatureStyle = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP, 0);
+        mStatusBarTemperature.setValue(String.valueOf(temperatureStyle));
+        mStatusBarTemperature.setSummary(mStatusBarTemperature.getEntry());
+        mStatusBarTemperature.setOnPreferenceChangeListener(this);
 
     }
 
@@ -124,6 +134,14 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
            Settings.System.putInt(resolver,
                    Settings.System.STATUS_BAR_CUSTOM_HEADER_DEFAULT, value ? 1 : 0);
             return true;
+		} else if (preference == mStatusBarTemperature) {
+            int temperatureStyle = Integer.valueOf((String) newValue);
+            int index = mStatusBarTemperature.findIndexOfValue((String) newValue);
+            Settings.System.putInt(
+                    resolver, Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP, temperatureStyle);
+            mStatusBarTemperature.setSummary(
+                    mStatusBarTemperature.getEntries()[index]);
+            return true;	
         }
         return false;
     }
