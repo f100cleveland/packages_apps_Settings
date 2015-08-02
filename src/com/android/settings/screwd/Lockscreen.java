@@ -33,17 +33,60 @@ import com.android.internal.logging.MetricsLogger;
 public class LockScreen extends SettingsPreferenceFragment {
 
 
-    @Override
+    public static final int IMAGE_PICK = 1;
+
+    private static final String KEY_WALLPAPER_SET = "lockscreen_wallpaper_set";
+    private static final String KEY_WALLPAPER_CLEAR = "lockscreen_wallpaper_clear";
+
+    private Preference mSetWallpaper;
+    private Preference mClearWallpaper;
+	
+	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.screwd_lockscreen_settings);
 
+        mSetWallpaper = (Preference) findPreference(KEY_WALLPAPER_SET);
+        mClearWallpaper = (Preference) findPreference(KEY_WALLPAPER_CLEAR);
     }
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-
+        if (preference == mSetWallpaper) {
+            setKeyguardWallpaper();
+            return true;
+        } else if (preference == mClearWallpaper) {
+            clearKeyguardWallpaper();
+            return true;
+        }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
+	
+	@Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == IMAGE_PICK && resultCode == Activity.RESULT_OK) {
+            if (data != null && data.getData() != null) {
+                Uri uri = data.getData();
+                Intent intent = new Intent();
+                intent.setClassName("com.android.wallpapercropper", "com.android.wallpapercropper.WallpaperCropActivity");
+                intent.putExtra("keyguardMode", "1");
+                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                intent.setData(uri);
+                startActivity(intent);
+            }
+        }
+    }
+
+    private void setKeyguardWallpaper() {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/*");
+        startActivityForResult(intent, IMAGE_PICK);
+    }
+
+    private void clearKeyguardWallpaper() {
+        WallpaperManager wallpaperManager = null;
+        wallpaperManager = WallpaperManager.getInstance(getActivity());
+        wallpaperManager.clearKeyguardWallpaper();
     }
 	
 	public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
