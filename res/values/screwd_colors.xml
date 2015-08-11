@@ -22,5 +22,8 @@
 
     <!-- Gesture Anywhere -->
     <color name="ga_gesture_color">@android:color/holo_blue_light</color>
+    
+    <!-- Dashboard category title text color -->
+    <color name="dashboard_category_title_text">@color/theme_accent</color>
 
 </resources>

@@ -357,4 +357,9 @@
     <style name="SetupWizardStorageStyle" parent="@style/SuwThemeMaterial.Light">
         <item name="android:colorAccent">#ff009688</item>
     </style>
+
+    <style name="TextAppearance.CategoryTitleText" parent="@android:style/TextAppearance.Material.Small">
+        <item name="android:textColor">@color/dashboard_category_title_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
