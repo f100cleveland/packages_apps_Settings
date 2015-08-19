@@ -834,5 +834,9 @@
     <string name="power_category">Power menu</string>
     <string name="lockscreen_enable_power_menu_title">Show power menu lock screen</string>
     <string name="lockscreen_enable_power_menu_summary">This option will only disable the power menu on secure lock screens</string>
+    
+    <!-- Media ducking -->
+    <string name="interruptions_ignore_while_media_title">Prevent audio ducking</string>
+    <string name="interruptions_ignore_while_media_summary">Do not reduce media playback volume when a notification arrives</string>
 
 </resources>
