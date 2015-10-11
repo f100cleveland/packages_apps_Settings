@@ -18,6 +18,17 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/interface_settings_title"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">								    	
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">	
+    
+    <PreferenceCategory
+        android:key="navbar_cat"
+        android:title="@string/interface_navbar_cat" >
+
+        <SwitchPreference
+            android:key="kill_app_longpress_back"
+            android:title="@string/kill_app_longpress_back"
+            android:summary="@string/kill_app_longpress_back_summary"/>
+
+    </PreferenceCategory>							    	
 
 </PreferenceScreen>

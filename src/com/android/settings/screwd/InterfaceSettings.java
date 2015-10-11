@@ -53,13 +53,24 @@ import java.util.List;
 public class InterfaceSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable{
 		
-    @Override
+    private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
+
+    private SwitchPreference mKillAppLongPressBack;
+	
+	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.screwd_interface_settings);
 		
 		PreferenceScreen prefSet = getPreferenceScreen();
+		
+		 // kill-app long press back
+        mKillAppLongPressBack = (SwitchPreference) findPreference(KILL_APP_LONGPRESS_BACK);
+        mKillAppLongPressBack.setOnPreferenceChangeListener(this);
+        int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
+                KILL_APP_LONGPRESS_BACK, 0);
+        mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
     }
 	
 	
@@ -72,6 +83,12 @@ public class InterfaceSettings extends SettingsPreferenceFragment implements
 	
     public boolean onPreferenceChange(Preference preference, Object objValue) {
 		final String key = preference.getKey();
+		
+		if (preference == mKillAppLongPressBack) {
+            boolean value = (Boolean) objValue;
+            Settings.Secure.putInt(getContentResolver(), KILL_APP_LONGPRESS_BACK,
+                    value ? 1 : 0);
+        }
 				
         return false;
     }
