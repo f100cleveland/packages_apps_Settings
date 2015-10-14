@@ -28,6 +28,11 @@
     <string name="recents">Recents</string>
     <string name="sounds">Sounds &amp; Volume</string>
     <string name="kernel_tweaker">Kernel Adiutor</string>
+    <string name="bitsyko_layers">Layers Manager</string>
+    
+    <!-- Screw'd Settings cats-->
+    <string name="sound_buttons_cat">Buttons</string>
+    
     
     <!-- Changelog -->
     <string name="changelog_screwd_title">Changelog</string>
@@ -57,9 +62,6 @@
     <string name="ripple_title">Ripple effect</string>
     <string name="colorize_ripple_title">Colorize ripple effect</string>
     <string name="colorize_ripple_dialog_title">Choose how to colorize the ripple effect</string>
-
-
-    <string name="bitsyko_layers">Layers Manager</string>
     
     <!-- About phone screen, Screw'd version name-->
     <string name="mod_version">Screw\'d version</string>
@@ -84,5 +86,9 @@
     <string name="chipset_info">Chipset</string>
     <!-- About phone screen, Free memory info -->
     <string name="mem_info">Memory</string>
+    
+    <!-- Volume rocker wake -->
+    <string name="volume_rocker_wake_title">Volume rocker wake</string>
+    <string name="volume_rocker_wake_summary">Pressing the volume keys will wake your device</string>
 
 </resources>

@@ -52,6 +52,10 @@ import com.android.internal.logging.MetricsLogger;
 public class SoundSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
     private static final String TAG = "SoundSettings";
+	
+	private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
+		
+    private SwitchPreference mVolumeRockerWake;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,6 +64,13 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.screwd_sound_settings);
 		
 		PreferenceScreen prefScreen = getPreferenceScreen();
+		
+		// volume rocker wake
+        mVolumeRockerWake = (SwitchPreference) findPreference(VOLUME_ROCKER_WAKE);
+        mVolumeRockerWake.setOnPreferenceChangeListener(this);
+        int volumeRockerWake = Settings.System.getInt(getContentResolver(),
+                VOLUME_ROCKER_WAKE, 0);
+        mVolumeRockerWake.setChecked(volumeRockerWake != 0);
     }
 
     @Override
@@ -75,6 +86,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         final String key = preference.getKey();
+		if (preference == mVolumeRockerWake) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(), VOLUME_ROCKER_WAKE,
+                    value ? 1 : 0);
+       	}
         return true;
     }
 	
