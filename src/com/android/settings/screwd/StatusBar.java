@@ -117,7 +117,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 	
 	@Override
     protected int getMetricsCategory() {
-        return MetricsLogger.DISPLAY;
+        return MetricsLogger.APPLICATION;
     }
 
 }
