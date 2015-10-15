@@ -15,6 +15,49 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+  <!-- Screw'd Settings -->
+    <string name="header_customize">Customize</string>
+    <string name="header_category_screwd">Screw\'d Settings</string>
+    <string name="ui">User Interface</string>
+    <string name="system">System</string>
+    <string name="notifications">Notifications</string>
+    <string name="misc">Misc</string>
+    <string name="navbar_navring">NavBar &amp; NavRing</string>
+    <string name="headsup">Heads Up</string>
+    <string name="power_menu">Power Menu</string>
+    <string name="recents">Recents</string>
+    <string name="sounds">Sounds &amp; Volume</string>
+    <string name="kernel_tweaker">Kernel Adiutor</string>
+    
+    <!-- Changelog -->
+    <string name="changelog_screwd_title">Changelog</string>
+    <string name="changelog_screwd_error">Unable to load changelog</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="help">Help</string>
+    <string name="add">Add</string>
+    <string name="help">Help</string>
+    <string name="attention">Attention</string>
+    <string name="enabled">Enabled</string>
+    <string name="default_string">Default</string>
+    <string name="delete">Delete</string>
+    <string name="general">General</string>
+    <string name="add">Add</string>
+    <string name="choose_app">Choose App</string>
+    <string name="reset_message">Reset all entries to default?</string>
+    <string name="reset_android">Android</string>
+    <string name="reset_screwd">Screw\'d</string>
+    <string name="positive_done">Done</string>
+    <string name="dlg_reset_values_message">Reset values to default?</string>
+    <string name="dlg_reset_android">Ok</string>
+    <string name="hidden_title">Hidden</string>
+    <string name="customize_title">Customize</string>
+    <string name="ripple_title">Ripple effect</string>
+    <string name="colorize_ripple_title">Colorize ripple effect</string>
+    <string name="colorize_ripple_dialog_title">Choose how to colorize the ripple effect</string>
+
 
     <string name="bitsyko_layers">Layers Manager</string>
     
