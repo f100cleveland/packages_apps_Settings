@@ -23,8 +23,7 @@
     <PreferenceScreen
     	android:key="ui"
         android:fragment="com.android.settings.screwd.InterfaceSettings"
-        android:title="@string/ui"
-	android:enabled="false" />
+        android:title="@string/ui" />
     
     <!-- System -->
     <PreferenceScreen
@@ -44,8 +43,7 @@
     <PreferenceScreen
     	android:key="sounds"
         android:title="@string/sounds"
-        android:fragment="com.android.settings.screwd.SoundSettings"
-	android:enabled="false" />	    
+        android:fragment="com.android.settings.screwd.SoundSettings" />	    
 
     <!-- Misc -->	
     <PreferenceScreen
