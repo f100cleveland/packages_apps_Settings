@@ -17,8 +17,6 @@
 
 package com.android.settings.screwd;
 
-import com.android.settings.notification.DropDownPreference;
-import com.android.settings.notification.DropDownPreference.Callback;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 

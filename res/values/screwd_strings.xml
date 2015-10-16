@@ -34,8 +34,9 @@
     <!-- Screw'd Settings cats-->
     <string name="sound_buttons_cat">Buttons</string>
     <string name="interface_navbar_cat">NavBar options</string>
-    
-    
+    <string name="display_category_led_title">LED lights</string>
+    <string name="battery_title">Battery</string>
+    <string name="battery2_summary">Customize battery icons and percentage</string>
     
     <!-- Changelog -->
     <string name="changelog_screwd_title">Changelog</string>
