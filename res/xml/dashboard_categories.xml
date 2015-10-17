@@ -75,6 +75,7 @@
     <!-- Customize -->
     <dashboard-category
         android:id="@+id/customize"
+	android:key="@string/category_key_screwd"
         android:title="@string/header_customize" >
 	
 	<!-- Screw'd Settings -->
