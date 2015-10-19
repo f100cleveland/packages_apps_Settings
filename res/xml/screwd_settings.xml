@@ -29,8 +29,7 @@
     <PreferenceScreen
     	android:key="system"
         android:fragment="com.android.settings.screwd.System"
-        android:title="@string/system"
-	android:enabled="false" />
+        android:title="@string/system" />
 	    
     <!-- Notifications -->
     <PreferenceScreen
