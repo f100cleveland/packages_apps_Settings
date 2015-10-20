@@ -39,7 +39,7 @@
         android:key="navbar_cat"
         android:title="@string/interface_navbar_cat" >
 
-        <com.android.settings.preference.SystemSettingSwitchPreference
+        <com.android.settings.screwd.SystemSettingSwitchPreference
             android:key="navigation_bar_show"
             android:title="@string/navbar_enable_bar"
             android:defaultValue="true" />
