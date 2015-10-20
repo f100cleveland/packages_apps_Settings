@@ -47,6 +47,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.EditText;
 
+import com.android.settings.Utils;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
