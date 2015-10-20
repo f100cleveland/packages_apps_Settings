@@ -16,7 +16,7 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/palette_benzo"
-        android:title="@string/palette_benzo_title"
+        android:title="@string/palette_screwd_title"
         />
     <item android:id="@+id/palette_material"
         android:title="@string/palette_material_title"
