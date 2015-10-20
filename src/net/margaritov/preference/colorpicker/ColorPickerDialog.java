@@ -106,7 +106,7 @@ public class ColorPickerDialog extends Dialog implements
         mInitialColor = initialColor;
         mAndroidColor = androidColor;
         mScrewdColor = screwdColor;
-        if (mAndroidColor != 0x00000000 && mBenzoColor != 0x00000000) {
+        if (mAndroidColor != 0x00000000 && mScrewdColor != 0x00000000) {
             mIsResetButtonEnabled = true;
         }
 
