@@ -26,6 +26,11 @@
         android:title="@string/statusbar" />
     
     <PreferenceScreen
+        android:key="navbar"
+        android:fragment="com.android.settings.screwd.Navbar"
+        android:title="@string/navbar_navring" />
+    
+    <PreferenceScreen
             android:key="systemuituner"
             android:title="@string/systemuituner"
             android:layout="@layout/preference_systemui_tuner" >

@@ -22,7 +22,7 @@
     <string name="system">System</string>
     <string name="notifications">Notifications</string>
     <string name="misc">Misc</string>
-    <string name="navbar_navring">NavBar &amp; NavRing</string>
+    <string name="navbar_navring">NavBar</string>
     <string name="headsup">Heads Up</string>
     <string name="power_menu">Power Menu</string>
     <string name="recents">Recents</string>

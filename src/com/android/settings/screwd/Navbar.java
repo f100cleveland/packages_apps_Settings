@@ -42,7 +42,6 @@ import android.preference.SwitchPreference;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.android.settings.util.Helpers;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -54,7 +53,10 @@ import com.android.internal.logging.MetricsLogger;
 
 public class Navbar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
+	
+	private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
 
+    private SwitchPreference mKillAppLongPressBack;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,7 +69,12 @@ public class Navbar extends SettingsPreferenceFragment implements
 		ContentResolver resolver = getActivity().getContentResolver();
 		PreferenceScreen prefSet = getPreferenceScreen();
 			
-
+		 // kill-app long press back
+        mKillAppLongPressBack = (SwitchPreference) findPreference(KILL_APP_LONGPRESS_BACK);
+        mKillAppLongPressBack.setOnPreferenceChangeListener(this);
+        int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
+                KILL_APP_LONGPRESS_BACK, 0);
+        mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
     }
 
     @Override
@@ -76,7 +83,11 @@ public class Navbar extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-		
+		if (preference == mKillAppLongPressBack) {
+            boolean value = (Boolean) newValue;
+            Settings.Secure.putInt(getContentResolver(), KILL_APP_LONGPRESS_BACK,
+                    value ? 1 : 0);
+        }
         return false;
     }
 
@@ -97,7 +108,7 @@ public class Navbar extends SettingsPreferenceFragment implements
                 new ArrayList<SearchIndexableResource>();
 
             SearchIndexableResource sir = new SearchIndexableResource(context);
-            sir.xmlResId = R.xml.screwd_misc_settings;
+            sir.xmlResId = R.xml.screwd_navbar_settings;
             result.add(sir);
 
             return result;
