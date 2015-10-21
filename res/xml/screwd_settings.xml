@@ -35,8 +35,7 @@
     <PreferenceScreen
     	android:key="notifications"
         android:fragment="com.android.settings.screwd.Notifications"
-        android:title="@string/notifications"
-	android:enabled="false" />
+        android:title="@string/notifications" />
 	
     <!-- Sound & volume -->
     <PreferenceScreen
