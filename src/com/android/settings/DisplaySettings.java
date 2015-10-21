@@ -58,7 +58,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.android.settings.benzo.DisplayRotation;
+import com.android.settings.screwd.DisplayRotation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -89,13 +89,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String ROTATION_ANGLE_270 = "270";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
-
-<<<<<<< HEAD
     private WarnedListPreference mFontSizePref;
-=======
-    private FontDialogPreference mFontSizePref;
     private PreferenceScreen mDisplayRotationPreference;
->>>>>>> e9258f8... Settings: Configurable 0, 90, 180 and 270 degree rotation (2/2)
 
     private final Configuration mCurConfig = new Configuration();
 
