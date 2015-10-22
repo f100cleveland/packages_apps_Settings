@@ -43,6 +43,12 @@
         android:title="@string/sounds"
         android:fragment="com.android.settings.screwd.SoundSettings" />	    
 
+    <!-- Lockscreen -->	
+    <PreferenceScreen
+    	android:key="lockscreen"
+        android:fragment="com.android.settings.screwd.Lockscreen"
+        android:title="@string/misc"/>
+    
     <!-- Misc -->	
     <PreferenceScreen
     	android:key="misc"

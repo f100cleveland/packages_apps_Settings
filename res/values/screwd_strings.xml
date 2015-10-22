@@ -26,6 +26,7 @@
     <string name="headsup">Heads Up</string>
     <string name="power_menu">Power Menu</string>
     <string name="recents">Recents</string>
+    <string name="lockscreen">Lockscreen</string>
     <string name="statusbar">Statusbar</string>
     <string name="sounds">Sounds &amp; Volume</string>
     <string name="kernel_tweaker">Kernel Adiutor</string>
