@@ -17,8 +17,13 @@
  */
 package com.android.settings.screwd;
 
+import android.provider.SearchIndexableResource;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+
 import android.app.Activity;
 import android.app.WallpaperManager;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,7 +35,10 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.internal.logging.MetricsLogger;
 
-public class LockScreen extends SettingsPreferenceFragment {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Lockscreen extends SettingsPreferenceFragment {
 
 
     public static final int IMAGE_PICK = 1;
