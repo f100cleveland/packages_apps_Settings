@@ -32,20 +32,6 @@
     <string name="kernel_tweaker">Kernel Adiutor</string>
     <string name="bitsyko_layers">Layers Manager</string>
     
-    <!-- UBER build date-->
-    <string name="build_date">UBER build date</string>
-    <string name="build_date_default">2015-01-01-0000</string>
-
-    <!-- UBER GCC version info -->
-    <string name="uber_android">GCC android</string>
-    <string name="uber_android_default">Unknown</string>
-    <string name="uber_kernel">GCC kernel</string>
-    <string name="uber_kernel_default">Unknown</string>
-
-    <!-- UBER GCC build flags info -->
-    <string name="uber_flags">Optimizations</string>
-    <string name="uber_flags_default">None</string>
-    
     <!-- Screw'd Settings cats-->
     <string name="sound_buttons_cat">Buttons</string>
     <string name="interface_navbar_cat">NavBar options</string>
