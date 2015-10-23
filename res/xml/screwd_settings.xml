@@ -47,7 +47,7 @@
     <PreferenceScreen
     	android:key="lockscreen"
         android:fragment="com.android.settings.screwd.Lockscreen"
-        android:title="@string/misc"/>
+        android:title="@string/lockscreen"/>
     
     <!-- Misc -->	
     <PreferenceScreen

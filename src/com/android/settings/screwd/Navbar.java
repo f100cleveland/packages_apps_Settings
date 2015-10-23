@@ -88,7 +88,7 @@ public class Navbar extends SettingsPreferenceFragment implements
             Settings.Secure.putInt(getContentResolver(), KILL_APP_LONGPRESS_BACK,
                     value ? 1 : 0);
         }
-        return false;
+        return true;
     }
 
 	
