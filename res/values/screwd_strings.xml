@@ -1132,5 +1132,9 @@
     <string name="recent_app_sidebar_label_color_title">Label color</string>
     <string name="recent_app_sidebar_bg_color_title">Background color</string>
     <string name="recent_app_sidebar_scale_title">Size</string>
+    
+    <!-- Volume button music seek -->
+    <string name="volbtn_music_controls_title">Music control</string>
+    <string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
 
 </resources>
