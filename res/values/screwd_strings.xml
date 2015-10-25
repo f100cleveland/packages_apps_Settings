@@ -39,6 +39,8 @@
     <string name="battery_title">Battery</string>
     <string name="battery2_summary">Customize battery icons and percentage</string>
     <string name="notification_drawer_cat">Notification Drawer</string>
+    <string name="lockscreen_options_title">Lockscreen options</string>
+    
     
     <!-- Changelog -->
     <string name="changelog_screwd_title">Changelog</string>
