@@ -62,6 +62,12 @@
             android:summaryOn="@string/summary_heads_up_enabled"
             android:summaryOff="@string/summary_heads_up_disabled" />
 	
+	<com.android.settings.screwd.SystemSettingSwitchPreference
+            android:key="force_expanded_notifications"
+            android:title="@string/notification_force_expand_title"
+            android:summary="@string/notification_force_expand_summary"
+            android:defaultValue="false" />
+	
 	<!-- Pulse notification light -->
         <PreferenceScreen
             android:key="notification_light"
