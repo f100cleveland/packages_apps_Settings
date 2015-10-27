@@ -461,7 +461,7 @@
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
     
     <!-- Keyboard and Input methods  -->
-    <string name="title_keyboard_input">Advanced options</string>
+    <string name="title_keyboard_input">IME Options</string>
     <string name="disable_fullscreen_keyboard_title">Disable fullscreen keyboard</string>
     <string name="disable_fullscreen_keyboard_summary">Landscape keyboard will never take up entire screen</string>
     <string name="volume_key_cursor_control_title">Volume key cursor control</string>
