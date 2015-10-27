@@ -31,15 +31,6 @@
         android:title="@string/navbar_navring" />
     
     <PreferenceScreen
-            android:key="systemuituner"
-            android:title="@string/systemuituner">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.tuner.TunerActivity" />
-    </PreferenceScreen>
-    
-    <PreferenceScreen
         android:key="recents"
         android:fragment="com.android.settings.screwd.Recents"
         android:title="@string/recents" />							    	
