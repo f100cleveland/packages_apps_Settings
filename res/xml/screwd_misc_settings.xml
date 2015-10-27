@@ -18,5 +18,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/misc"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-	    	
+
+    <com.android.settings.screwd.SystemSettingSwitchPreference
+        android:key="toast_icon"
+        android:title="@string/toast_icon_title"
+        android:summary="@string/toast_icon_summary"
+        android:defaultValue="true" />
+		    	
 </PreferenceScreen>
