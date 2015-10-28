@@ -87,15 +87,8 @@ public class Navbar extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.Secure.putInt(getContentResolver(), KILL_APP_LONGPRESS_BACK,
                     value ? 1 : 0);
+			return true;			
         }
-        return true;
-    }
-
-	
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-		
-
         return false;
     }
 	

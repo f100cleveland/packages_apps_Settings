@@ -153,7 +153,7 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
         if (mMultiColorNotificationLed) {
             setHasOptionsMenu(true);
         } else {
-            mAdvancedPrefs.removePreference(mCustomEnabledPref);
+            mGeneralPrefs.removePreference(mCustomEnabledPref);
             prefSet.removePreference(mPhonePrefs);
             prefSet.removePreference(mApplicationPrefList);
             resetColors();
