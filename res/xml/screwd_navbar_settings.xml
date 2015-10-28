@@ -27,7 +27,7 @@
             android:title="@string/navbar_enable_bar"
             android:defaultValue="true" />
 
-        <com.android.settings.preference.SystemSettingSwitchPreference
+        <com.android.settings.screwd.SystemSettingSwitchPreference
             android:key="navigation_bar_left"
             android:title="@string/navigation_bar_left_title"
             android:summary="@string/navigation_bar_left_summary"
