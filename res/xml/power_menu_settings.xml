@@ -19,6 +19,11 @@
     android:title="@string/power_menu_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <com.android.settings.screwd.SecureSettingSwitchPreference
+        android:key="advanced_reboot"
+        android:title="@string/advanced_reboot_title"
+        android:summary="@string/advanced_reboot_summary" />
+    
     <SwitchPreference
         android:key="power"
         android:title="@string/power_menu_power_title"
