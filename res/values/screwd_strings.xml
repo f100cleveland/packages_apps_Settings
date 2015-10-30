@@ -282,13 +282,6 @@
     <!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
     <string name="bluetooth_accept_all_files">Accept all file types</string>
     
-    <!--Status bar carrier -->
-    <string name="show_carrier_title">Carrier label</string>
-    <string name="show_carrier_disabled">Disabled</string>
-    <string name="show_carrier_keyguard">Keyguard carrier</string>
-    <string name="show_carrier_statusbar">Status bar carrier</string>
-    <string name="show_carrier_enabled">Enabled</string>
-    
     <!-- Quick settings quick pull down -->
     <string name="quick_pulldown_title">Quick pulldown</string>
     <string name="quick_pulldown_summary">%1$s edge of the status bar pulls down Quick Settings</string>

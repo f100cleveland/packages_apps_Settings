@@ -62,12 +62,10 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
     private static final String TAG = "StatusBarSettings";
 	
-	private static final String SHOW_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String PREF_CUSTOM_HEADER_DEFAULT = "status_bar_custom_header_default";
     private static final String STATUS_BAR_TEMPERATURE = "status_bar_temperature";
     private static final String STATUS_BAR_TEMPERATURE_STYLE = "status_bar_temperature_style";
 
-    private ListPreference mShowCarrierLabel;
     private SwitchPreference mCustomHeader;
 	private ListPreference mStatusBarTemperature;
 	private ListPreference mStatusBarTemperatureStyle;
@@ -93,18 +91,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
-
-        mShowCarrierLabel =
-                (ListPreference) findPreference(SHOW_CARRIER_LABEL);
-        int showCarrierLabel = Settings.System.getIntForUser(resolver,
-                Settings.System.STATUS_BAR_SHOW_CARRIER, 1, UserHandle.USER_CURRENT);
-        mShowCarrierLabel.setValue(String.valueOf(showCarrierLabel));
-        mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntry());
-        mShowCarrierLabel.setOnPreferenceChangeListener(this);
-
-        if (!Utils.isVoiceCapable(getActivity())) {
-            prefSet.removePreference(mShowCarrierLabel);
-        }
 
         // Status bar custom header hd
         mCustomHeader = (SwitchPreference) findPreference(PREF_CUSTOM_HEADER_DEFAULT);
@@ -136,14 +122,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
 		ContentResolver resolver = getActivity().getContentResolver();
-		if (preference == mShowCarrierLabel) {
-            int showCarrierLabel = Integer.valueOf((String) newValue);
-            int index = mShowCarrierLabel.findIndexOfValue((String) newValue);
-            Settings.System.putIntForUser(resolver, Settings.System.
-                STATUS_BAR_SHOW_CARRIER, showCarrierLabel, UserHandle.USER_CURRENT);
-            mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntries()[index]);
-            return true;
-        } else if (preference == mCustomHeader) {
+		if (preference == mCustomHeader) {
            boolean value = (Boolean) newValue;
            Settings.System.putInt(resolver,
                    Settings.System.STATUS_BAR_CUSTOM_HEADER_DEFAULT, value ? 1 : 0);
