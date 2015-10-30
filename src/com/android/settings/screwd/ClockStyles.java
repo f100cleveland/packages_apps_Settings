@@ -65,7 +65,6 @@ public class ClockStyles extends SettingsPreferenceFragment
     public static final int CLOCK_DATE_STYLE_LOWERCASE = 1;
     public static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
     private static final int CUSTOM_CLOCK_DATE_FORMAT_INDEX = 18;
-    private static final String PREF_CLOCK_DATE_POSITION = "clock_date_position";
 
     private static final int MENU_RESET = Menu.FIRST;
 
@@ -76,7 +75,6 @@ public class ClockStyles extends SettingsPreferenceFragment
     private ColorPickerPreference mColorPicker;
     private ListPreference mClockDateDisplay;
     private ListPreference mClockDateStyle;
-    private ListPreference mClockDatePosition;
     private ListPreference mClockDateFormat;
     private SwitchPreference mStatusBarClock;
 
@@ -159,13 +157,6 @@ public class ClockStyles extends SettingsPreferenceFragment
                 .getContentResolver(), Settings.System.STATUSBAR_CLOCK_DATE_STYLE,
                 0)));
         mClockDateStyle.setSummary(mClockDateStyle.getEntry());
-
-        mClockDatePosition = (ListPreference) findPreference(PREF_CLOCK_DATE_POSITION);
-        mClockDatePosition.setOnPreferenceChangeListener(this);
-        mClockDatePosition.setValue(Integer.toString(Settings.System.getInt(getActivity()
-                .getContentResolver(), Settings.System.STATUSBAR_CLOCK_DATE_POSITION,
-                0)));
-        mClockDatePosition.setSummary(mClockDatePosition.getEntry());
 
         mClockDateFormat = (ListPreference) findPreference(PREF_CLOCK_DATE_FORMAT);
         mClockDateFormat.setOnPreferenceChangeListener(this);
@@ -292,14 +283,6 @@ public class ClockStyles extends SettingsPreferenceFragment
                         Settings.System.STATUSBAR_CLOCK_DATE_FORMAT, (String) newValue);
                 }
             }
-            return true;
-        } else if (preference == mClockDatePosition) {
-            int val = Integer.parseInt((String) newValue);
-            int index = mClockDatePosition.findIndexOfValue((String) newValue);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STATUSBAR_CLOCK_DATE_POSITION, val);
-            mClockDatePosition.setSummary(mClockDatePosition.getEntries()[index]);
-            parseClockDateFormats();
             return true;
         }
         return false;
