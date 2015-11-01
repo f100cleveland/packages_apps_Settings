@@ -59,7 +59,6 @@
     <PreferenceScreen
     	android:key="misc"
         android:fragment="com.android.settings.screwd.Misc"
-        android:title="@string/misc"
-	android:enabled="false" />
+        android:title="@string/misc"/>
 
 </PreferenceScreen>
