@@ -26,4 +26,7 @@
     <!-- Dashboard category title text color -->
     <color name="dashboard_category_title_text">@color/theme_accent</color>
 
+    <!-- Dashboard boarder color -->
+    <color name="dashboard_border_color">?android:attr/colorAccent</color>
+
 </resources>
