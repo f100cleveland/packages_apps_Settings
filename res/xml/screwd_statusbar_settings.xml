@@ -68,7 +68,11 @@
     <PreferenceCategory
         android:key="statusbar_clock_category"
         android:title="@string/statusbar_clock_cat" >
-    
+    	
+	<Preference
+            android:key="statusbarclock"
+            android:fragment="com.android.settings.screwd.StatusbarClock"
+            android:title="@string/status_bar_clock" />
     
     </PreferenceCategory>
     
