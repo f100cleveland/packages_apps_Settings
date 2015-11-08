@@ -33,7 +33,14 @@
              <extra android:name="useAppPickerOnly" android:value="true" />
              <extra android:name="fragment" android:value="com.android.settings.slim.fragments.LockscreenShortcutsFragment" />
         </PreferenceScreen>
-
+	
+	<PreferenceScreen
+            android:title="@string/lockscreen_targets_message" >
+            <intent
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.cm.LockscreenShortcutsActivity" />
+        </PreferenceScreen>
+	
     </PreferenceCategory>
     
     <PreferenceCategory
