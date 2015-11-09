@@ -19,6 +19,11 @@
     android:title="@string/misc"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceScreen
+    	android:key="multitwindow"
+        android:fragment="com.android.settings.screwd.fragments.MultiWindow"
+        android:title="@string/multiwindow_settings_title" />
+    
     <com.android.settings.screwd.SystemSettingSwitchPreference
         android:key="toast_icon"
         android:title="@string/toast_icon_title"
