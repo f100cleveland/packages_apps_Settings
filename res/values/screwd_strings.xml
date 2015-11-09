@@ -965,6 +965,11 @@
     <!-- Volume Keys Media Control -->
     <string name="volume_keys_control_media_stream">Media control</string>
     <string name="volume_keys_control_media_stream_summary">Volume keys control media volume rather than notifications</string>
+    
+    <!-- Recents Fullscreen -->
+    <string name="recents_show_fullscreen">Recents in fullscreen</string>
+    <string name="recents_fullscreen_summary_enabled">Recents in fullscreen is enabled</string>
+    <string name="recents_fullscreen_summary_disabled">Recents in fullscreen is disabled</string>
 
 
 </resources>
