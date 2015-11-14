@@ -59,6 +59,7 @@ public class Navbar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 	
 	private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
+	private static final String NAVIGATION_BAR_TINT = "navigation_bar_tint";
     private static final String DIM_NAV_BUTTONS = "dim_nav_buttons";
     private static final String DIM_NAV_BUTTONS_TIMEOUT = "dim_nav_buttons_timeout";
     private static final String DIM_NAV_BUTTONS_ALPHA = "dim_nav_buttons_alpha";
