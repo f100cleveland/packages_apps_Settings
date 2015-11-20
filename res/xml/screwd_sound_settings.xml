@@ -23,7 +23,13 @@
         android:key="sound_button_cat"
         android:title="@string/sound_buttons_cat" >
 
-    	<SwitchPreference
+    	<com.android.settings.screwd.SystemSettingSwitchPreference
+            android:key="swap_volume_buttons"
+            android:title="@string/swap_volume_buttons_title"
+            android:summary="@string/swap_volume_buttons_summary"
+            android:defaultValue="true"/>
+	
+	<SwitchPreference
        	     android:key="volume_rocker_wake"
              android:summary="@string/volume_rocker_wake_summary"
              android:title="@string/volume_rocker_wake_title" />
