@@ -24,5 +24,11 @@
     	android:key="power_menu"
         android:title="@string/power_menu"
         android:fragment="com.android.settings.screwd.PowerMenuActions" /> 				
-
+	
+    <!-- Battery light -->
+    <PreferenceScreen
+    	android:key="battery_light"
+        android:title="@string/battery_light_title"
+        android:fragment="com.android.settings.notificationlight.BatteryLightSettings" />	
+	
 </PreferenceScreen>
