@@ -179,18 +179,20 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mTapToWakePreference.setOnPreferenceChangeListener(this);
 		
         if (!isTapToWakeAvailable(getResources())) {
-            mTapToWakePreference.setEnabled(false);
+            //disable the switch if the flag isn't true
+			mTapToWakePreference.setEnabled(false); 
         }
 
         if (RotationPolicy.isRotationSupported(activity)) {
             mDisplayRotationPreference = (PreferenceScreen) findPreference(KEY_DISPLAY_ROTATION);
 		}
 		
-        if (isCameraGestureAvailable(getResources())) {
-            mCameraGesturePreference = (SwitchPreference) findPreference(KEY_CAMERA_GESTURE);
-            mCameraGesturePreference.setOnPreferenceChangeListener(this);
-        } else {
-            removePreference(KEY_CAMERA_GESTURE);
+		mCameraGesturePreference = (SwitchPreference) findPreference(KEY_CAMERA_GESTURE);
+        mCameraGesturePreference.setOnPreferenceChangeListener(this);
+		
+        if (!isCameraGestureAvailable(getResources())) {
+		    //disable the switch if the flag isn't true
+			mCameraGesturePreference.setEnabled(false);
         }
 
         if (isCameraDoubleTapPowerGestureAvailable(getResources())) {
