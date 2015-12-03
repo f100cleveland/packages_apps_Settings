@@ -42,6 +42,12 @@
     <string name="lockscreen_options_title">Lockscreen options</string>
     <string name="navbar_slimdim_cat">SlimDim</string>
     <string name="lockscreen_shortcuts_cat">Shortcuts</string>
+    <string name="statusbar_clock_cat">Clock options</string>
+    <string name="statusbar_notif_cat">Notification options</string>
+    <string name="statusbar_battery_cat">Battery options</string>
+    <string name="statusbar_header_cat">Header options</string>
+    <string name="statusbar_weather_cat">Weather options</string>
+    <string name="statusbar_general_cat">General options</string>
     
     
     <!-- Changelog -->

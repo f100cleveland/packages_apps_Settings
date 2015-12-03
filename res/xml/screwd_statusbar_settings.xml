@@ -20,68 +20,103 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/statusbar">
     
-    <PreferenceScreen
-        android:key="status_bar_clock_date_settings"
-        android:title="@string/status_bar_clock_date_settings_title"
-        android:summary="@string/status_bar_clock_date_settings_summary"
-        android:fragment="com.android.settings.screwd.StatusBarClockDateSettings" />
+    <PreferenceCategory
+        android:key="statusbar_general_category"
+        android:title="@string/statusbar_general_cat" >
+	
+	<PreferenceScreen
+           android:fragment="com.android.settings.screwd.CarrierLabel"
+           android:key="carrier_options"
+           android:title="@string/carrier_title"
+           android:summary="@string/carrier_options_summary" />
     
-    <PreferenceScreen
-        android:fragment="com.android.settings.screwd.CarrierLabel"
-        android:key="carrier_options"
-        android:title="@string/carrier_title"
-        android:summary="@string/carrier_options_summary" />
+    	<com.android.settings.screwd.SystemSettingSwitchPreference
+    	   android:key="double_tap_sleep_gesture"
+           android:title="@string/double_tap_to_sleep_title"
+           android:summary="@string/double_tap_to_sleep_summary"
+           android:defaultValue="true" />
     
-    <com.android.settings.screwd.SystemSettingSwitchPreference
-    	android:key="double_tap_sleep_gesture"
-        android:title="@string/double_tap_to_sleep_title"
-        android:summary="@string/double_tap_to_sleep_summary"
-        android:defaultValue="true" />
+    	<PreferenceScreen
+           android:key="network_traffic"
+           android:fragment="com.android.settings.screwd.Traffic"
+           android:title="@string/network_traffic_title" />
+	
+	<com.android.settings.screwd.SystemSettingSwitchPreference
+           android:key="status_bar_brightness_control"
+           android:title="@string/status_bar_toggle_brightness"
+           android:summary="@string/status_bar_toggle_brightness_summary"
+           android:defaultValue="false" />
+	
+    </PreferenceCategory>	
     
-    <PreferenceScreen
-        android:key="network_traffic"
-        android:fragment="com.android.settings.screwd.Traffic"
-        android:title="@string/network_traffic_title" />
+    <PreferenceCategory
+        android:key="statusbar_clock_category"
+        android:title="@string/statusbar_clock_cat" >
     
-    <PreferenceScreen
+    
+    	<PreferenceScreen
+           android:key="status_bar_clock_date_settings"
+           android:title="@string/status_bar_clock_date_settings_title"
+           android:summary="@string/status_bar_clock_date_settings_summary"
+           android:fragment="com.android.settings.screwd.StatusBarClockDateSettings" />
+    
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="statusbar_notifications_category"
+        android:title="@string/statusbar_notif_cat" >
+    	
+	<PreferenceScreen
            android:key="breathing_notifications"
            android:fragment="com.android.settings.screwd.BreathingNotifications"
            android:title="@string/breathing_notifications_title" 
            android:summary="@string/breathing_notifications_summary" />
+	   
+	<com.android.settings.screwd.SystemSettingSwitchPreference
+    	   android:key="status_bar_notif_count"
+           android:title="@string/status_bar_notif_count_title"
+           android:summary="@string/status_bar_notif_count_summary"
+           android:defaultValue="false" />   
     
-    <com.android.settings.screwd.SystemSettingSwitchPreference
-    	android:key="status_bar_notif_count"
-        android:title="@string/status_bar_notif_count_title"
-        android:summary="@string/status_bar_notif_count_summary"
-        android:defaultValue="false" />
+    </PreferenceCategory>
     
-    <PreferenceScreen
-        android:fragment="com.android.settings.screwd.BatterySettings"
-        android:key="battery_style_pref"
-        android:title="@string/battery_title"
-    	android:summary="@string/battery2_summary" />	       
-
-     <com.android.settings.screwd.SystemSettingSwitchPreference
+    <PreferenceCategory
+        android:key="statusbar_battery_category"
+        android:title="@string/statusbar_battery_cat" >
+    
+    	<PreferenceScreen
+            android:fragment="com.android.settings.screwd.BatterySettings"
+            android:key="battery_style_pref"
+            android:title="@string/battery_title"
+    	    android:summary="@string/battery2_summary" />
+    
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="statusbar_header_category"
+        android:title="@string/statusbar_header_cat" >
+    	
+	<com.android.settings.screwd.SystemSettingSwitchPreference
             android:key="status_bar_custom_header"
             android:title="@string/status_bar_custom_header_title"
             android:summary="@string/status_bar_custom_header_summary"
             android:defaultValue="false"/>
 
-     <ListPreference
+     	<ListPreference
             android:key="status_bar_custom_header_default"
             android:title="@string/status_bar_custom_header_default_title"
             android:dialogTitle="@string/status_bar_custom_header_default_title"
             android:entries="@array/custom_header_entries"
             android:entryValues="@array/custom_header_values"
             android:dependency="status_bar_custom_header"/>
-      
-      <com.android.settings.screwd.SystemSettingSwitchPreference
-           android:key="status_bar_brightness_control"
-           android:title="@string/status_bar_toggle_brightness"
-           android:summary="@string/status_bar_toggle_brightness_summary"
-           android:defaultValue="false" />
-      
-      <com.android.settings.screwd.SystemSettingSwitchPreference
+    
+    </PreferenceCategory>
+   	       
+    <PreferenceCategory
+        android:key="statusbar_weather_category"
+        android:title="@string/statusbar_weather_cat" >	       
+     
+     	<com.android.settings.screwd.SystemSettingSwitchPreference
            android:key="status_bar_show_weather"
            android:title="@string/status_bar_show_weather_title"
            android:summary="@string/status_bar_show_weather_summary"
@@ -100,5 +135,7 @@
            android:dialogTitle="@string/status_bar_temperature_location_title"
            android:entries="@array/status_bar_temperature_location_entries"
            android:entryValues="@array/status_bar_temperature_location_values" />
+      
+     </PreferenceCategory>
 	      		 	
 </PreferenceScreen>
