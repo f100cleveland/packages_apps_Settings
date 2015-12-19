@@ -72,6 +72,11 @@
         android:key="statusbar_notifications_category"
         android:title="@string/statusbar_notif_cat" >
     	
+	<com.android.settings.screwd.SystemSettingSwitchPreference
+           android:key="enable_task_manager"
+           android:title="@string/enable_task_manager_title"
+           android:summary="@string/enable_task_manager_summary" />
+	
 	<PreferenceScreen
            android:key="breathing_notifications"
            android:fragment="com.android.settings.screwd.BreathingNotifications"

@@ -65,10 +65,12 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String PREF_CUSTOM_HEADER_DEFAULT = "status_bar_custom_header_default";
     private static final String STATUS_BAR_TEMPERATURE = "status_bar_temperature";
     private static final String STATUS_BAR_TEMPERATURE_STYLE = "status_bar_temperature_style";
+	private static final String ENABLE_TASK_MANAGER = "enable_task_manager";
 
     private ListPreference mCustomHeaderDefault;
 	private ListPreference mStatusBarTemperature;
 	private ListPreference mStatusBarTemperatureStyle;
+	private SwitchPreference mEnableTaskManager;
 	
 
     @Override
@@ -119,6 +121,10 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarTemperatureStyle.setOnPreferenceChangeListener(this);
 
         enableStatusBarTemperatureDependents();
+		
+		mEnableTaskManager = (SwitchPreference) findPreference(ENABLE_TASK_MANAGER);
+        mEnableTaskManager.setChecked((Settings.System.getInt(resolver,
+                Settings.System.ENABLE_TASK_MANAGER, 0) == 1));
 
     }
 
@@ -156,7 +162,13 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 	
 	@Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-	
+		if  (preference == mEnableTaskManager) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.ENABLE_TASK_MANAGER, checked ? 1:0);
+            return true;
+		}	
+		
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 	
