@@ -1136,5 +1136,13 @@
     <!-- Volume button music seek -->
     <string name="volbtn_music_controls_title">Music control</string>
     <string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
+    
+    <!-- Power menu Animations  -->
+    <string name="power_menu_animation_title">Power menu animation</string>
+    <string name="power_menu_animation_summary">Change the enter/exit animation of the power menu</string>
+    <string name="power_menu_animation_dialog_title">Select power menu animation</string>
+    <string name="power_menu_animation_aosp">AOSP (default)</string>
+    <string name="power_menu_animation_bottom">Bottom</string>
+    <string name="power_menu_animation_top">Top</string>
 
 </resources>
