@@ -106,7 +106,7 @@ public class RecentAppSidebar extends SettingsPreferenceFragment implements Dial
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         menu.add(0, MENU_RESET, 0, R.string.reset)
-                .setIcon(R.drawable.ic_settings_reset)
+                .setIcon(R.drawable.ic_settings_reset_button)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
     }
 
