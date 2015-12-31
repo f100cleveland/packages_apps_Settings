@@ -30,7 +30,7 @@
     <string name="statusbar">Statusbar</string>
     <string name="sounds">Sounds &amp; Volume</string>
     <string name="kernel_tweaker">Kernel Adiutor</string>
-    <string name="bitsyko_layers">Layers</string>
+    <string name="bitsyko_layers">Layers Manager</string>
     
     <!-- Screw'd Settings cats-->
     <string name="sound_buttons_cat">Buttons</string>
