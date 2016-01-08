@@ -213,11 +213,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         mNightModePreference = (ListPreference) findPreference(KEY_NIGHT_MODE);
-        final UiModeManager uiManager = (UiModeManager) getSystemService(
-                Context.UI_MODE_SERVICE);
-        final int currentNightMode = uiManager.getNightMode();
-        mNightModePreference.setValue(String.valueOf(currentNightMode));
-        mNightModePreference.setOnPreferenceChangeListener(this);
+		if (mNightModePreference != null) {
+            final UiModeManager uiManager = (UiModeManager) getSystemService(
+                    Context.UI_MODE_SERVICE);
+            final int currentNightMode = uiManager.getNightMode();
+            mNightModePreference.setValue(String.valueOf(currentNightMode));
+            mNightModePreference.setOnPreferenceChangeListener(this);
+        }
 
         mWakeWhenPluggedOrUnplugged =
                 (SwitchPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED);
