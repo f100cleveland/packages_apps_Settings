@@ -111,6 +111,6 @@ public class Notifications extends SettingsPreferenceFragment implements
 	
 	@Override
 	protected int getMetricsCategory() {
-        return MetricsLogger.NOTIFICATION_DRAWER_SETTINGS;
+        return MetricsLogger.SCREWD_SETTINGS;
     }
 }
