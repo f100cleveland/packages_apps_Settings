@@ -861,15 +861,6 @@
     <!-- Navigation bar button color -->
     <string name="navbar_button_tint_title">Button color</string>
     
-    <!-- Color picker -->
-    <string name="dialog_color_picker_title">Color Picker</string>
-    <string name="press_color_to_apply">Press on color below to apply</string>
-    <string name="palette_darkkat_title">Screwd</string>
-    <string name="palette_material_title">Material</string>
-    <string name="palette_rgb_title">RGB</string>
-    <string name="reset_android_title">Android default</string>
-    <string name="reset_darkkat_title">Screwd default</string>
-    
     <!-- Qucik unlock -->
     <string name="unlock_quick_unlock_control_title">Quick unlock</string>
     <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/password is entered</string>
