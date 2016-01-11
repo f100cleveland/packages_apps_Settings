@@ -1163,7 +1163,7 @@
     <string name="reset">Reset</string>
     
     <!-- QS -->
-    <string name="qs_settings_title">Tiles</string>
+    <string name="qs_settings_title">QS Tiles</string>
     <string name="qs_category_title">Quick Settings</string>
     <string name="qs_order_title">Select and order tiles</string>
     <string name="add_qs">Add new tile</string>

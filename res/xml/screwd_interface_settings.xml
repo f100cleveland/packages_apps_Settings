@@ -26,6 +26,11 @@
         android:title="@string/statusbar" />
     
     <PreferenceScreen
+    	android:id="@+id/qs_settings"
+        android:title="@string/qs_settings_title"
+        android:fragment="com.android.settings.screwd.QsSettings" />
+    
+    <PreferenceScreen
         android:key="navbar"
         android:fragment="com.android.settings.screwd.Navbar"
         android:title="@string/navbar_navring" />
