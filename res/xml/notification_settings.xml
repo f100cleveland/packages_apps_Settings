@@ -110,7 +110,14 @@
             android:summary="@string/interruptions_ignore_while_media_summary"
             android:defaultValue="false" />
 
-         <!-- When device is locked -->
+        <!-- Fingerprint vibration -->
+        <com.android.settings.screwd.SystemSettingSwitchPreference
+                android:key="fingerprint_success_vib"
+                android:title="@string/fprint_sucess_vib_title"
+                android:summary="@string/fprint_sucess_vib_summary"
+                android:defaultValue="true" />
+	
+	<!-- When device is locked -->
         <com.android.settings.DropDownPreference
                 android:key="lock_screen_notifications"
                 android:title="@string/lock_screen_notifications_title"
