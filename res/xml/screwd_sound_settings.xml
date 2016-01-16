@@ -91,6 +91,12 @@
         	android:entries="@array/less_notification_sounds_entries"
         	android:entryValues="@array/less_notification_sounds_values"
         	android:persistent="false" />
+	  
+	  <com.android.settings.screwd.SystemSettingSwitchPreference
+        	android:key="screenshot_sound"
+        	android:title="@string/screenshot_sound_title"
+        	android:summary="@string/screenshot_sound_summary"
+        	android:defaultValue="true" />	
 			
     </PreferenceCategory>
     
