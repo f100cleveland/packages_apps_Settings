@@ -56,7 +56,6 @@
 
     <!-- General strings -->
     <string name="ok">OK</string>
-    <string name="ok_string">Okay</string>
     <string name="reset">Reset</string>
     <string name="help">Help</string>
     <string name="add">Add</string>
