@@ -67,7 +67,7 @@
 
     <PreferenceCategory
         android:key="omni_recents_panel"
-        android:title="@string/recent_panel_category" >
+        android:title="@string/recents_alternate_cat" >
 
         <!-- OmniSwitch -->
         <PreferenceScreen

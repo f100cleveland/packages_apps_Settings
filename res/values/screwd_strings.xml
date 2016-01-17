@@ -44,6 +44,7 @@
     <string name="lockscreen_shortcuts_cat">Shortcuts</string>
     <string name="statusbar_clock_cat">Clock options</string>
     <string name="statusbar_notif_cat">Notification options</string>
+    <string name="recents_alternate_cat">Alternative panels</string>
     <string name="statusbar_battery_cat">Battery options</string>
     <string name="statusbar_header_cat">Header options</string>
     <string name="statusbar_weather_cat">Weather options</string>
