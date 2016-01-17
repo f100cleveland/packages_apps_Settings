@@ -34,6 +34,8 @@ import android.preference.PreferenceScreen;
 import android.preference.PreferenceCategory;
 import android.preference.Preference.OnPreferenceChangeListener;
 
+import com.android.settings.widget.SeekBarPreferenceCham;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,9 +45,14 @@ import com.android.internal.logging.MetricsLogger;
 
 public class Notifications extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
+		
     private static final String QUICK_PULLDOWN = "quick_pulldown";
+	private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
+  
 
     private ListPreference mQuickPulldown;
+	private SeekBarPreferenceCham mQSShadeAlpha;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +74,14 @@ public class Notifications extends SettingsPreferenceFragment implements
                 Settings.System.QS_QUICK_PULLDOWN, 0, UserHandle.USER_CURRENT);
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         mQuickPulldown.setSummary(mQuickPulldown.getEntry());
+		
+		// QS shade alpha
+        mQSShadeAlpha =
+        (SeekBarPreferenceCham) prefSet.findPreference(PREF_QS_TRANSPARENT_SHADE);
+        int qSShadeAlpha = Settings.System.getInt(resolver,
+                    Settings.System.QS_TRANSPARENT_SHADE, 255);
+        mQSShadeAlpha.setValue(qSShadeAlpha / 1);
+        mQSShadeAlpha.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -83,6 +98,11 @@ public class Notifications extends SettingsPreferenceFragment implements
                     quickPulldownValue, UserHandle.USER_CURRENT);
             mQuickPulldown.setSummary(mQuickPulldown.getEntries()[index]);
             return true;
+		} else if (preference == mQSShadeAlpha) {
+                int alpha = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.QS_TRANSPARENT_SHADE, alpha * 1);
+                return true;	
         }
 		return false;
     }
