@@ -218,10 +218,7 @@ public class ActionListViewSettings extends ListFragment implements
 
         mPicker = new ShortcutPickerHelper(mActivity, this);
 
-        File folder = new File(Environment.getExternalStorageDirectory() + File.separator +
-                ".broken" + File.separator + "icons");
-
-        mImageTmp = new File(folder.toString()
+        mImageTmp = new File(mActivity.getCacheDir()
                 + File.separator + "shortcut.tmp");
 
         DragSortListView listView = (DragSortListView) getListView();
@@ -247,7 +244,7 @@ public class ActionListViewSettings extends ListFragment implements
                         mPendingIndex = arg2;
                         mPendingLongpress = false;
                         mPendingNewAction = false;
-                        mPicker.pickShortcut(getId(), false, false, true);
+                        mPicker.pickShortcut(getId());
                     }
                 }
             }
@@ -366,23 +363,18 @@ public class ActionListViewSettings extends ListFragment implements
         }
         if (bmp != null && !mPendingLongpress) {
             // Icon is present, save it for future use and add the file path to the action.
-            if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-                File folder = new File(Environment.getExternalStorageDirectory() + File.separator +
-                        ".broken" + File.separator + "icons");
-                folder.mkdirs();
-                String fileName = folder.toString()
-                        + File.separator + "shortcut_" + System.currentTimeMillis() + ".png";
-                try {
-                    FileOutputStream out = new FileOutputStream(fileName);
-                    bmp.compress(Bitmap.CompressFormat.PNG, 100, out);
-                    out.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                } finally {
-                    action = action + "?hasExtraIcon=" + fileName;
-                    File image = new File(fileName);
-                    image.setReadable(true, false);
-                }
+            String fileName = mActivity.getFilesDir()
+                    + File.separator + "shortcut_" + System.currentTimeMillis() + ".png";
+            try {
+                FileOutputStream out = new FileOutputStream(fileName);
+                bmp.compress(Bitmap.CompressFormat.PNG, 100, out);
+                out.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                action = action + "?hasExtraIcon=" + fileName;
+                File image = new File(fileName);
+                image.setReadable(true, false);
             }
         }
         if (mPendingNewAction) {
@@ -410,18 +402,13 @@ public class ActionListViewSettings extends ListFragment implements
                             Toast.LENGTH_LONG).show();
                     return;
                 }
-                if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-                    File folder = new File(Environment.getExternalStorageDirectory() +
-                            File.separator + ".broken" + File.separator + "icons");
-                    folder.mkdirs();
-                    File image = new File(folder.toString() + File.separator
-                            + "shortcut_" + System.currentTimeMillis() + ".png");
-                    String path = image.getAbsolutePath();
-                    mImageTmp.renameTo(image);
-                    image.setReadable(true, false);
-                    updateAction(null, null, path, mPendingIndex, false);
-                    mPendingIndex = -1;
-                }
+                File image = new File(mActivity.getFilesDir() + File.separator
+                        + "shortcut_" + System.currentTimeMillis() + ".png");
+                String path = image.getAbsolutePath();
+                mImageTmp.renameTo(image);
+                image.setReadable(true, false);
+                updateAction(null, null, path, mPendingIndex, false);
+                mPendingIndex = -1;
             }
         } else {
             if (mImageTmp.exists()) {
@@ -988,10 +975,6 @@ public class ActionListViewSettings extends ListFragment implements
         }
 
         public class IconAdapter extends BaseAdapter {
-
-            ActionListViewSettings getOwner() {
-                return (ActionListViewSettings) getTargetFragment();
-            }
 
             TypedArray icons;
             String[] labels;
