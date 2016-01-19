@@ -34,6 +34,7 @@
     
     <!-- Screw'd Settings cats-->
     <string name="sound_buttons_cat">Buttons</string>
+    <string name="sound_sounds_cat">Sounds</string>
     <string name="interface_navbar_cat">NavBar options</string>
     <string name="display_category_led_title">LED lights</string>
     <string name="battery_title">Battery</string>

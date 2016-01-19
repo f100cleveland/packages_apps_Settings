@@ -112,7 +112,7 @@ public class Recents extends SettingsPreferenceFragment implements
             mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
             return true;
         } else if (preference == mImmersiveRecents) {
-            Settings.System.putInt(resolver, Settings.System.IMMERSIVE_RECENTS,
+            Settings.System.putInt(getActivity().getContentResolver(), Settings.System.IMMERSIVE_RECENTS,
                     Integer.valueOf((String) newValue));
             mImmersiveRecents.setValue(String.valueOf(newValue));
             mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
