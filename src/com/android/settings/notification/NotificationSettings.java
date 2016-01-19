@@ -129,6 +129,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private int mRingerMode = -1;
     private SwitchPreference mVolumeLinkNotification;
     private PreferenceCategory mSoundCategory;
+	private PreferenceCategory mNotificationCat;
     private FingerprintManager mFingerprintManager;
     private SystemSettingSwitchPreference mFingerprintVib;
 
@@ -158,6 +159,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
 
         addPreferencesFromResource(R.xml.notification_settings);
         mSoundCategory = (PreferenceCategory) findPreference(KEY_SOUND);
+		mNotificationCat = (PreferenceCategory) findPreference(KEY_NOTIFICATION);
 
         initVolumePreference(KEY_MEDIA_VOLUME, AudioManager.STREAM_MUSIC,
                 com.android.internal.R.drawable.ic_audio_media_mute);
@@ -180,7 +182,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SystemSettingSwitchPreference) findPreference(KEY_FINGERP_VIBRATE);
         if (!mFingerprintManager.isHardwareDetected()){
-            prefScreen.removePreference(mFingerprintVib);
+            mNotificationCat.removePreference(mFingerprintVib);
         }
 
         initRingtones(mSoundCategory);
