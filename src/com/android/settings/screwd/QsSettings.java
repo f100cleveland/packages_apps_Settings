@@ -44,9 +44,9 @@ public class QsSettings extends SettingsPreferenceFragment implements
     private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
 	private static final String PREF_QS_TRANSPARENT_HEADER = "qs_transparent_header";
 	
-	private Preference mQSTiles;
 	private SeekBarPreferenceCham mQSShadeAlpha;
 	private SeekBarPreferenceCham mQSHeaderAlpha;
+	private ListPreference mNumColumns;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -72,6 +72,14 @@ public class QsSettings extends SettingsPreferenceFragment implements
         	Settings.System.QS_TRANSPARENT_HEADER, 255);
         mQSHeaderAlpha.setValue(qSHeaderAlpha / 1);
         mQSHeaderAlpha.setOnPreferenceChangeListener(this);
+		
+		mNumColumns = (ListPreference) findPreference("sysui_qs_num_columns");
+        int numColumns = Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.QS_NUM_TILE_COLUMNS, getDefaultNumColums(),
+                UserHandle.USER_CURRENT);
+        mNumColumns.setValue(String.valueOf(numColumns));
+        updateNumColumnsSummary(numColumns);
+        mNumColumns.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -91,9 +99,34 @@ public class QsSettings extends SettingsPreferenceFragment implements
                 int alpha = (Integer) newValue;
                 Settings.System.putInt(resolver,
                         Settings.System.QS_TRANSPARENT_HEADER, alpha * 1);
-                return true;			
+                return true;
+		} else if (preference == mNumColumns) {
+            int numColumns = Integer.valueOf((String) newValue);
+            Settings.Secure.putIntForUser(resolver, Settings.Secure.QS_NUM_TILE_COLUMNS,
+                    numColumns, UserHandle.USER_CURRENT);
+            updateNumColumnsSummary(numColumns);
+            return true;			
         }
 		return false;
+    }
+	
+	private void updateNumColumnsSummary(int numColumns) {
+        String prefix = (String) mNumColumns.getEntries()[mNumColumns.findIndexOfValue(String
+                .valueOf(numColumns))];
+        mNumColumns.setSummary(getActivity().getResources().getString(R.string.qs_num_columns_showing, prefix));
+    }
+
+    private int getDefaultNumColums() {
+        try {
+            Resources res = getActivity().getPackageManager()
+                    .getResourcesForApplication("com.android.systemui");
+            int val = res.getInteger(res.getIdentifier("quick_settings_num_columns", "integer",
+                    "com.android.systemui")); // better not be larger than 5, that's as high as the
+                                              // list goes atm
+            return Math.max(1, val);
+        } catch (Exception e) {
+            return 3;
+        }
     }
     
     @Override

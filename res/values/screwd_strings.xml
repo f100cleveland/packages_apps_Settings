@@ -1228,6 +1228,9 @@
     <string name="quick_settings_reset_message">Reset quick settings tiles?</string>
     <string name="quick_settings_title">Tile configuration</string>
     <string name="quick_settings_summary">Configure quick settings tiles</string>
+    <string name="qs_num_columns_title">Number of tiles per row</string>
+    <string name="qs_num_columns_showing">%1$s tiles per row showing</string>
+    <string name="qs_main_tiles_summary">Two main tiles on the first row</string>
     
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
