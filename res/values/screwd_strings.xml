@@ -1315,4 +1315,10 @@
     <string name="dashboard_tileview_double_lines_summary_on">Show dashboard tile titles in 1 line</string>
     <string name="dashboard_tileview_double_lines_summary_off">Show dashboard tile titles in 2 lines</string>
     
+    <!-- QS shade transparency -->
+    <string name="qs_transparent_shade">QS shade transparency</string>
+    
+    <!-- QS header transparency -->
+    <string name="qs_transparent_header">QS header transparency</string>
+    
 </resources>

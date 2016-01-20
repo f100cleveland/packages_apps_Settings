@@ -43,15 +43,6 @@
             android:summary="@string/notification_force_expand_summary"
             android:defaultValue="false" />
 	
-	<com.android.settings.widget.SeekBarPreferenceCham
-            android:key="qs_transparent_shade"
-            android:title="@string/qs_transparent_shade"
-            android:max="255"
-            settings:min="0"
-            settings:unitsLeft=""
-            settings:unitsRight=""
-            android:persistent="false" />
-	
 	</PreferenceCategory>
 	
 	<!-- Pulse notification light -->
