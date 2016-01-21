@@ -42,6 +42,8 @@ import android.provider.SearchIndexableResource;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
+import com.android.settings.widget.SeekBarPreferenceCham;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,12 +64,14 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String PREF_LESS_NOTIFICATION_SOUNDS = "less_notification_sounds";
 	private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
     private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
+	private static final String PREF_TRANSPARENT_VOLUME_DIALOG = "transparent_volume_dialog";
 		
     private SwitchPreference mVolumeRockerWake;
 	private SwitchPreference mVolumeKeysControlMedia;
 	private SwitchPreference mSafeHeadsetVolume;
     private ListPreference mAnnoyingNotifications;
 	private SwitchPreference mCameraSounds;
+	private SeekBarPreferenceCham mVolumeDialogAlpha;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -105,6 +109,15 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 		mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
         mCameraSounds.setChecked(SystemProperties.getBoolean(PROP_CAMERA_SOUND, true));
         mCameraSounds.setOnPreferenceChangeListener(this);
+		
+		// Volume dialog alpha
+        mVolumeDialogAlpha =
+                    (SeekBarPreferenceCham) prefSet.findPreference(PREF_TRANSPARENT_VOLUME_DIALOG);
+        int volumeDialogAlpha = Settings.System.getInt(resolver,
+                    Settings.System.TRANSPARENT_VOLUME_DIALOG, 255);
+        mVolumeDialogAlpha.setValue(volumeDialogAlpha / 1);
+        mVolumeDialogAlpha.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -146,6 +159,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
            } else {
                showDialogInner(DLG_CAMERA_SOUND);
            }
+		} else if (preference == mVolumeDialogAlpha) {
+                int alpha = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.TRANSPARENT_VOLUME_DIALOG, alpha * 1);
+                return true;s   
         }
         return true;
     }
