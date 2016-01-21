@@ -37,6 +37,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.util.cm.PowerMenuConstants;
 
+import com.android.aicpextras.widget.SeekBarPreferenceCham;
+
 import static com.android.internal.util.cm.PowerMenuConstants.*;
 import com.android.settings.widget.NumberPickerPreference;
 
@@ -50,6 +52,8 @@ public class PowerMenuActions extends SettingsPreferenceFragment
 
     private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
     private static final String SCREENSHOT_DELAY = "screenshot_delay";
+	private static final String PREF_TRANSPARENT_POWER_MENU = "transparent_power_menu";
+	
     private SwitchPreference mRebootPref;
     private SwitchPreference mScreenshotPref;
     private SwitchPreference mScreenrecordPref;
@@ -60,6 +64,8 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     private SwitchPreference mBugReportPref;
     private SwitchPreference mSilentPref;
     private SlimSeekBarPreference mOnTheGoAlphaPref;
+	private SeekBarPreferenceCham mPowerMenuAlpha;
+  
 
     Context mContext;
     private ArrayList<String> mLocalUserConfig = new ArrayList<String>();
@@ -132,6 +138,14 @@ public class PowerMenuActions extends SettingsPreferenceFragment
         mScreenshotDelay.setCurrentValue(ssDelay);
 
         getUserConfig();
+		
+		// Power menu alpha
+    	mPowerMenuAlpha =
+        	(SeekBarPreferenceCham) prefSet.findPreference(PREF_TRANSPARENT_POWER_MENU);
+        int powerMenuAlpha = Settings.System.getInt(resolver,
+        	Settings.System.TRANSPARENT_POWER_MENU, 100);
+        mPowerMenuAlpha.setValue(powerMenuAlpha / 1);
+        mPowerMenuAlpha.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -254,6 +268,10 @@ public class PowerMenuActions extends SettingsPreferenceFragment
             Settings.System.putInt(mCr, Settings.System.SCREENSHOT_DELAY,
                     value);
             return true;
+		} else if (preference == mPowerMenuAlpha) {
+                Settings.System.putInt(mCr,
+                        Settings.System.TRANSPARENT_POWER_MENU, alpha * 1);
+                return true;	
         }
         return false;
     }

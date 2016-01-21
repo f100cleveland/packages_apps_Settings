@@ -1324,4 +1324,7 @@
     <!-- Volume dialog transparency -->
     <string name="volume_dialog_transparency">Volume dialog transparency</string>
     
+    <!-- Power menu and dialogs transparency -->
+    <string name="power_menu_transparency">Power/reboot menu transparency</string>
+    
 </resources>
