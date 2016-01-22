@@ -37,7 +37,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.util.cm.PowerMenuConstants;
 
-import com.android.aicpextras.widget.SeekBarPreferenceCham;
+import com.android.settings.widget.SeekBarPreferenceCham;
 
 import static com.android.internal.util.cm.PowerMenuConstants.*;
 import com.android.settings.widget.NumberPickerPreference;
@@ -141,8 +141,8 @@ public class PowerMenuActions extends SettingsPreferenceFragment
 		
 		// Power menu alpha
     	mPowerMenuAlpha =
-        	(SeekBarPreferenceCham) prefSet.findPreference(PREF_TRANSPARENT_POWER_MENU);
-        int powerMenuAlpha = Settings.System.getInt(resolver,
+        	(SeekBarPreferenceCham) mPrefSet.findPreference(PREF_TRANSPARENT_POWER_MENU);
+        int powerMenuAlpha = Settings.System.getInt(mCr,
         	Settings.System.TRANSPARENT_POWER_MENU, 100);
         mPowerMenuAlpha.setValue(powerMenuAlpha / 1);
         mPowerMenuAlpha.setOnPreferenceChangeListener(this);
@@ -269,7 +269,8 @@ public class PowerMenuActions extends SettingsPreferenceFragment
                     value);
             return true;
 		} else if (preference == mPowerMenuAlpha) {
-                Settings.System.putInt(mCr,
+                int alpha = (Integer) newValue;
+				Settings.System.putInt(mCr,
                         Settings.System.TRANSPARENT_POWER_MENU, alpha * 1);
                 return true;	
         }

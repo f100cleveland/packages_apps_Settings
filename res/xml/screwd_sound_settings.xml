@@ -30,7 +30,7 @@
             settings:min="0"
             settings:unitsLeft=""
             settings:unitsRight=""
-            settings:persistent="false" />
+            android:persistent="false" />
 	
 	<com.android.settings.screwd.SystemSettingSwitchPreference
             android:key="swap_volume_buttons"

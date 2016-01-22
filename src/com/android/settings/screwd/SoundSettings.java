@@ -112,8 +112,8 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 		
 		// Volume dialog alpha
         mVolumeDialogAlpha =
-                    (SeekBarPreferenceCham) prefSet.findPreference(PREF_TRANSPARENT_VOLUME_DIALOG);
-        int volumeDialogAlpha = Settings.System.getInt(resolver,
+                    (SeekBarPreferenceCham) findPreference(PREF_TRANSPARENT_VOLUME_DIALOG);
+        int volumeDialogAlpha = Settings.System.getInt(getContentResolver(),
                     Settings.System.TRANSPARENT_VOLUME_DIALOG, 255);
         mVolumeDialogAlpha.setValue(volumeDialogAlpha / 1);
         mVolumeDialogAlpha.setOnPreferenceChangeListener(this);
@@ -160,10 +160,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                showDialogInner(DLG_CAMERA_SOUND);
            }
 		} else if (preference == mVolumeDialogAlpha) {
-                int alpha = (Integer) newValue;
-                Settings.System.putInt(resolver,
+                int alpha = (Integer) objValue;
+                Settings.System.putInt(getContentResolver(),
                         Settings.System.TRANSPARENT_VOLUME_DIALOG, alpha * 1);
-                return true;s   
+                return true;   
         }
         return true;
     }

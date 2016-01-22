@@ -39,7 +39,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.screwd.qs.QSTiles;
 import com.android.internal.logging.MetricsLogger;
 
-public class QsSettings extends SettingsPreferenceFragmentimplements
+public class QsSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
@@ -47,11 +47,15 @@ public class QsSettings extends SettingsPreferenceFragmentimplements
 	
 	private Preference mQSTiles;
 	private SeekBarPreferenceCham mQSShadeAlpha;
+	private SeekBarPreferenceCham mQSHeaderAlpha;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.qs_settings);
+		
+		final ContentResolver resolver = getActivity().getContentResolver();
+		PreferenceScreen prefSet = getPreferenceScreen();
 
         mQSTiles = findPreference("qs_order");
 		
