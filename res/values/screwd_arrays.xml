@@ -16,19 +16,6 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-        <!-- Dashboard columns -->
-    <string-array name="dashboard_columns_entries">
-        <item>@string/dashboard_columns_default</item>
-        <item>@string/dashboard_columns_two</item>
-        <item>@string/dashboard_columns_three</item>
-    </string-array>
-
-    <string-array name="dashboard_columns_values" translatable="false">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </string-array>
-    
     <string-array name="status_bar_battery_style_entries" translatable="false">
         <item>@string/status_bar_battery_style_icon_portrait</item>
         <item>@string/status_bar_battery_style_icon_landscape</item>
