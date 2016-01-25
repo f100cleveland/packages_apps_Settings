@@ -848,7 +848,7 @@
     <string name="listview_bounce_interpolator">Bounce</string>
 
     <!-- Disabling FC notifications -->
-    <string name="disable_fc_notifications_title">Diable FC Notifications</string>
+    <string name="disable_fc_notifications_title">Disable FC Notifications</string>
     <string name="disable_fc_notifications_summary">This will hide all force close notifications</string>
 
     <!-- Doze notification color invert -->
@@ -1267,7 +1267,7 @@
     <string name="keyguard_torch_summary">Longpress power button with screen of turns on torch</string>
     
     <!-- Disable OS on LS -->
-    <string name="block_on_secure_keyguard_title">Disable quick settings</string>
+    <string name="block_on_secure_keyguard_title">Disable on lockscreen</string>
     <string name="block_on_secure_keyguard_summary">Disables quick settings on secure lockscreen</string>
     
     <!-- Less notification sounds -->
