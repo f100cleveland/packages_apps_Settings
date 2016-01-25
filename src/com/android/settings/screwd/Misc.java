@@ -53,6 +53,10 @@ import com.android.internal.logging.MetricsLogger;
 public class Misc extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 		
+	private static final String KEY_LOCK_CLOCK = "lock_clock";
+    private static final String KEY_LOCK_CLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
+		
+	private PreferenceScreen mLockClock;
 	
 	private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 	
@@ -70,6 +74,10 @@ public class Misc extends SettingsPreferenceFragment implements
 		ContentResolver resolver = getActivity().getContentResolver();
 		PreferenceScreen prefSet = getPreferenceScreen();
 		
+		mLockClock = (PreferenceScreen) findPreference(KEY_LOCK_CLOCK);
+        if (!Utils.isPackageInstalled(getActivity(), KEY_LOCK_CLOCK_PACKAGE_NAME)) {
+            prefSet.removePreference(mLockClock);
+        }
 
     }
 
