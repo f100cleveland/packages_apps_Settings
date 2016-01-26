@@ -19,8 +19,9 @@
 	
 	<!-- Screw'd AOSP -->
 	<PreferenceScreen android:key="screwd_logo"
-                android:enabled="false"
-                android:layout="@layout/screwd_rom_logo" />
+                android:enabled="true"
+                android:layout="@layout/screwd_rom_logo"
+		android:fragment="com.android.settings.screwd.About" />
 
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2015 Screw'd AOSP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/about_screwd"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:key="about"
+        android:title="@string/about_screwd">
+
+        <!-- Screw'd Share -->
+        <Preference
+            android:key="share"
+            android:title="@string/share_screwd_title"
+            android:summary="@string/share_screwd_summary" />
+
+    </PreferenceCategory>
+    
+    <!-- The Team -->
+    <PreferenceCategory
+        android:key="the_team"
+        android:title="@string/devs">
+    
+    <Preference
+        android:title="Corey (MrApocalypse) Edwards"
+	android:summary="Founder, Lead Developer"/>
+    
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="category_maintainers"
+        android:title="@string/maintainer_category">
+	
+    <Preference 
+        android:key="device_maintainer"
+        style="?android:preferenceInformationStyle"
+        android:title="@string/device_maintainer"
+        android:summary="@string/screwd_device_maintainer" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="sites"
+        android:title="@string/sites_screwd">
+
+        <!-- Screw'd Website -->
+        <Preference
+            android:key="screwd_website"
+            android:title="@string/screwd_website_title"
+            android:summary="@string/screwd_website_summary" />
+	
+	<!-- Screw'd Github -->
+        <Preference
+            android:key="screwd_source"
+            android:title="@string/screwd_source_title"
+            android:summary="@string/screwd_source_summary" />
+
+        <!-- Screw'd GooglePlus -->
+        <Preference
+            android:key="screwd_google_plus"
+            android:title="@string/screwd_google_plus_title"
+            android:summary="@string/screwd_google_plus_summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

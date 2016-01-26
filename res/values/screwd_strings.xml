@@ -50,6 +50,7 @@
     <string name="statusbar_header_cat">Header options</string>
     <string name="statusbar_weather_cat">Weather options</string>
     <string name="statusbar_general_cat">General options</string>
+    <string name="maintainer_category">Builds for this device are maintained by</string>
     
     
     <!-- Changelog -->
@@ -1332,4 +1333,29 @@
     <string name="dashboard_tileview_double_lines_summary_on">Show dashboard tile titles in 1 line</string>
     <string name="dashboard_tileview_double_lines_summary_off">Show dashboard tile titles in 2 lines</string>
     
+    <!-- About Screw'd -->
+    <string name="about_screwd">About Screw\'d</string>
+
+    <!-- Share Screwd -->
+    <string name="screwd_website_title">Website</string>
+    <string name="screwd_website_summary">Check out our website for more info!</string>
+    <string name="share_screwd_title">Share Screw\'d</string>
+    <string name="share_screwd_summary">Let others know about Screw\'d</string>
+    <string name="share_message">Visit us on Google+ https://plus.google.com/communities/109777359391119326629</string>
+    <string name="share_chooser_title">Share Screwd\'d</string>
+    
+    <!-- Screw'd Sites -->
+    <string name="sites_screwd">Useful links</string>
+    <string name="screwd_source_title">Github</string>
+    <string name="screwd_source_summary">Checkout the ROM\'s source</string>
+    <string name="screwd_google_plus_title">Google+</string>
+    <string name="screwd_google_plus_summary">Visit our G+ page for support and news</string>
+    
+    <string name="device_maintainer">Device maintainer</string>
+    <string name="device_maintainers">Device maintainers</string>
+    <string name="screwd_device_maintainer">Device maintainer</string>
+    <string name="maintainer_default">Unknown</string>
+    <string name="maintainer_default_summary">Sorry, there is no maintainer for this device!</string>
+    <string name="devs">Developers</string>
+   
 </resources>
