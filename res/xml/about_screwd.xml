@@ -37,7 +37,8 @@
     
     <Preference
         android:title="Corey (MrApocalypse) Edwards"
-	android:summary="Founder, Lead Developer"/>
+	android:summary="Founder, Lead Developer"
+	android:enabled="false" />
     
     </PreferenceCategory>
     
@@ -48,8 +49,7 @@
     <Preference 
         android:key="device_maintainer"
         style="?android:preferenceInformationStyle"
-        android:title="@string/device_maintainer"
-        android:summary="@string/screwd_device_maintainer" />
+        android:title="@string/device_maintainer" />
     </PreferenceCategory>
     
     <PreferenceCategory

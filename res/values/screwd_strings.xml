@@ -1266,7 +1266,7 @@
     
     <!-- Lockscreen Torch toggle -->
     <string name="keyguard_torch_title">Lockscreen torch</string>
-    <string name="keyguard_torch_summary">Longpress power button with screen of turns on torch</string>
+    <string name="keyguard_torch_summary">Longpress power button with screen off turns on torch</string>
     
     <!-- Disable OS on LS -->
     <string name="block_on_secure_keyguard_title">Disable on lockscreen</string>
