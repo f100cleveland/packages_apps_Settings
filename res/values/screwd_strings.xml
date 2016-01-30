@@ -658,6 +658,11 @@
 
     <!-- Button shorcut actions -->
     <string name="shortcut_action_back">Back</string>
+    <string name="shortcut_action_camera">Camera</string>
+    <string name="shortcut_action_media_next">Music - next track</string>
+    <string name="shortcut_action_media_play_pause">Music - play/pause</string>
+    <string name="shortcut_action_media_previous">Music - previous track</string>
+    <string name="shortcut_action_wake_device">Wake up device</string>
     <string name="shortcut_action_app">Custom app</string>
     <string name="shortcut_action_expanded_desktop">Expanded desktop</string>
     <string name="shortcut_action_home">Home</string>
