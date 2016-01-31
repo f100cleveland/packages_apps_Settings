@@ -995,7 +995,7 @@
   <string name="qs_battery_saver_tile">Risparmio energetico</string>
   <string name="qs_brightness_tile">Luminosità</string>
   <string name="qs_screen_off_tile">Schermo spento</string>
-  <string name="qs_screenshot_tile">Schreenshot</string>
+  <string name="qs_screenshot_tile">Screenshot</string>
   <string name="qs_expanded_desktop_tile">Desktop esteso</string>
   <string name="qs_tile_display_inversion">Inversione colore</string>
   <string name="qs_tile_dnd">Non disturbare</string>
