@@ -30,13 +30,11 @@
         	android:entryValues="@array/quick_pulldown_values"
         	android:persistent="false" />
 	
-	<!-- Heads up -->
-        <com.android.settings.screwd.GlobalSettingSwitchPreference
-            android:key="heads_up_notifications_enabled"
+	<PreferenceScreen
+            android:key="headsup"
             android:title="@string/heads_up_notifications"
-            android:summaryOn="@string/summary_heads_up_enabled"
-            android:summaryOff="@string/summary_heads_up_disabled" />
-	
+            android:fragment="com.android.settings.screwd.HeadsUpSettings" />
+
 	<com.android.settings.screwd.SystemSettingSwitchPreference
             android:key="force_expanded_notifications"
             android:title="@string/notification_force_expand_title"

@@ -31,6 +31,7 @@
     <string name="sounds">Sounds &amp; Volume</string>
     <string name="kernel_tweaker">Kernel Adiutor</string>
     <string name="bitsyko_layers">Layers Manager</string>
+    <string name="themes_settings_title">Themes</string>
     
     <!-- Screw'd Settings cats-->
     <string name="sound_buttons_cat">Buttons</string>
@@ -1381,5 +1382,10 @@
     <!-- Task Manager -->
     <string name="enable_task_manager_title">Task Manager</string>
     <string name="enable_task_manager_summary">Enable/Disable action for the task manager button in the expanded statusbar area</string>
+    
+    <!--Heads Up -->
+    <string name="heads_up_notifications">Heads up</string>
+    <string name="heads_up_snooze">Snooze</string>
+    <string name="heads_up_timeout">Timeout</string>
 
 </resources>
