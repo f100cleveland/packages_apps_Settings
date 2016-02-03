@@ -39,12 +39,19 @@ import android.preference.PreferenceCategory;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.SwitchPreference;
 
+import com.android.internal.util.du.AbstractAsyncSuCMDProcessor;
+import com.android.internal.util.du.CMDProcessor;
+import com.android.internal.util.du.Helpers;
+
 import android.text.TextUtils;
 import android.widget.Toast;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.DataOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
