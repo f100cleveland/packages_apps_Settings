@@ -149,7 +149,11 @@ public class QSTileHolder {
 			case QSConstants.TILE_NAVBAR:
                 resourceName = "ic_qs_navbar_on";
                 stringId = R.string.qs_navbar_tile;
-                break;	
+                break;
+			case QSConstants.TILE_THEMES:
+                resourceName = "ic_qs_themes_on";
+                stringId = R.string.qs_tile_themes;
+                break;		
             default:
                 return null;
         }
