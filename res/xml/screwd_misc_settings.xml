@@ -54,6 +54,6 @@
         <SwitchPreference
             android:key="selinux"
             android:title="@string/selinux_title"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 		    	
 </PreferenceScreen>
