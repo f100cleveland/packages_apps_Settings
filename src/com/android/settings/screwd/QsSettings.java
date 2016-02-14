@@ -36,7 +36,6 @@ import java.util.List;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.screwd.qs.QSTiles;
 import com.android.internal.logging.MetricsLogger;
 
 public class QsSettings extends SettingsPreferenceFragment implements
@@ -52,12 +51,11 @@ public class QsSettings extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.qs_settings);
+        addPreferencesFromResource(R.xml.screwd_qs_settings);
 		
 		final ContentResolver resolver = getActivity().getContentResolver();
 		PreferenceScreen prefSet = getPreferenceScreen();
 
-        mQSTiles = findPreference("qs_order");
 		
 		// QS shade alpha
         mQSShadeAlpha =
@@ -80,9 +78,6 @@ public class QsSettings extends SettingsPreferenceFragment implements
     public void onResume() {
         super.onResume();
 
-        int qsTileCount = QSTiles.determineTileCount(getActivity());
-        mQSTiles.setSummary(getResources().getQuantityString(R.plurals.qs_tiles_summary,
-                    qsTileCount, qsTileCount));
     }
 	
 	public boolean onPreferenceChange(Preference preference, Object newValue) {

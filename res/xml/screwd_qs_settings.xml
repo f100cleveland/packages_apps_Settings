@@ -22,9 +22,12 @@
         android:title="@string/qs_category_title">
 
         <PreferenceScreen
-            android:key="qs_order"
-            android:title="@string/qs_order_title"
-            android:fragment="com.android.settings.screwd.qs.QSTiles" />
+                android:title="@string/quick_settings_title"
+                android:summary="@string/quick_settings_summary" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.systemui"
+                    android:targetClass="com.android.systemui.tuner.QsActivity" />
+        </PreferenceScreen>
 
         <com.android.settings.screwd.SecureSettingSwitchPreference
             android:key="sysui_qs_main_tiles"
