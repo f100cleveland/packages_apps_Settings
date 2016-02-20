@@ -1402,4 +1402,8 @@
     <string name="status_bar_screwd_logo_summary">Enable to show Screw\'d  logo on the left side of statusbar</string>
     <string name="status_bar_screwd_logo_color">Screw\'d logo color</string>
     
+    <!-- Flashlight notification -->
+    <string name="flashlight_notification_title">Flashlight notification</string>
+    <string name="flashlight_notification_summary">Enable notificiation for when the flashlight is on</string>
+    
 </resources>

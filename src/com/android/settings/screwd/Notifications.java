@@ -40,15 +40,18 @@ import java.util.List;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
+import com.android.internal.util.screwd.screwdUtils;
 
 public class Notifications extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 		
     private static final String QUICK_PULLDOWN = "quick_pulldown";
 	private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
+	private static final String FLASHLIGHT_NOTIFICATION = "flashlight_notification";
 
     private ListPreference mQuickPulldown;
 	ListPreference mSmartPulldown;
+	private SwitchPreference mFlashlightNotification;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,6 +82,16 @@ public class Notifications extends SettingsPreferenceFragment implements
         mSmartPulldown.setValue(String.valueOf(smartPulldown));
         updateSmartPulldownSummary(smartPulldown);
 		
+		mFlashlightNotification = (SwitchPreference) findPreference(FLASHLIGHT_NOTIFICATION);
+        mFlashlightNotification.setOnPreferenceChangeListener(this);
+        if (!screwdUtils.deviceSupportsFlashLight(getActivity())) {
+            prefSet.removePreference(mFlashlightNotification);
+        } else {
+        mFlashlightNotification.setChecked((Settings.System.getInt(resolver,
+                Settings.System.FLASHLIGHT_NOTIFICATION, 0) == 1));
+        }
+
+		
     }
 
     @Override
@@ -99,6 +112,11 @@ public class Notifications extends SettingsPreferenceFragment implements
             int smartPulldown = Integer.valueOf((String) newValue);
             Settings.System.putInt(resolver, Settings.System.QS_SMART_PULLDOWN, smartPulldown);
             updateSmartPulldownSummary(smartPulldown);
+            return true;
+		} else if  (preference == mFlashlightNotification) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FLASHLIGHT_NOTIFICATION, checked ? 1:0);
             return true;	
         }
 		return false;
