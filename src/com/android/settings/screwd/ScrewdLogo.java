@@ -21,6 +21,8 @@ import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserHandle;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
@@ -40,8 +42,10 @@ public class ScrewdLogo extends SettingsPreferenceFragment implements OnPreferen
 
     private static final String TAG = "ScrewdLogo";
 
+    private static final String KEY_SCREWD_LOGO = "status_bar_screwd_logo";
     private static final String KEY_SCREWD_LOGO_COLOR = "status_bar_screwd_logo_color";
 
+    private ListPreference mScrewdLogo;
     private ColorPickerPreference mScrewdLogoColor;
 
     @Override
@@ -51,8 +55,16 @@ public class ScrewdLogo extends SettingsPreferenceFragment implements OnPreferen
         addPreferencesFromResource(R.xml.screwd_logo);
 
         PreferenceScreen prefSet = getPreferenceScreen();
-
-        // SCREWD logo color
+		
+		//Screw'd logo type
+        mScrewdLogo = (ListPreference) prefSet.findPreference(KEY_SCREWD_LOGO);
+        mScrewdLogo.setOnPreferenceChangeListener(this);
+        int screwdLogovalue = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.STATUS_BAR_SCREWD_LOGO, 0, UserHandle.USER_CURRENT);
+        mScrewdLogo.setValue(String.valueOf(screwdLogovalue));
+        mScrewdLogo.setSummary(mScrewdLogo.getEntry());
+		
+		// SCREWD logo color
         mScrewdLogoColor =
             (ColorPickerPreference) prefSet.findPreference(KEY_SCREWD_LOGO_COLOR);
         mScrewdLogoColor.setOnPreferenceChangeListener(this);
@@ -65,7 +77,12 @@ public class ScrewdLogo extends SettingsPreferenceFragment implements OnPreferen
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mScrewdLogoColor) {
+        if (preference == mScrewdLogo) {
+            Settings.System.putInt(getContentResolver(), Settings.System.STATUS_BAR_SCREWD_LOGO,
+                    Integer.valueOf((String) newValue));
+            mScrewdLogo.setValue(String.valueOf(newValue));
+            mScrewdLogo.setSummary(mScrewdLogo.getEntry());
+	} else if (preference == mScrewdLogoColor) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
             preference.setSummary(hex);

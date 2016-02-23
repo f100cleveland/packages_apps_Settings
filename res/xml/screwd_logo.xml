@@ -19,10 +19,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <com.android.settings.screwd.SystemSettingSwitchPreference
+    <ListPreference
             android:key="status_bar_screwd_logo"
             android:title="@string/status_bar_screwd_logo_title"
-            android:summary="@string/status_bar_screwd_logo_summary" />
+            android:summary="@string/status_bar_screwd_logo_summary"
+	    android:entries="@array/statusbar_logo_entries"
+            android:entryValues="@array/statusbar_logo_values" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="status_bar_screwd_logo_color"
