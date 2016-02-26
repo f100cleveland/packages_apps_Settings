@@ -22,7 +22,16 @@
         android:key="about"
         android:title="@string/about_screwd">
 
-        <!-- Screw'd Share -->
+        <PreferenceScreen
+       	    android:key="screwdota"
+       	    android:title="@string/screwdota_title" >
+       	    <intent
+            	android:action="android.intent.action.MAIN"
+           	android:targetPackage="com.fusionjack.screwdota"
+           	android:targetClass="com.fusionjack.screwdota.MainActivity" />
+	</PreferenceScreen>
+	
+	<!-- Screw'd Share -->
         <Preference
             android:key="share"
             android:title="@string/share_screwd_title"
@@ -36,9 +45,9 @@
         android:title="@string/devs">
     
     <Preference
-        android:title="Corey (MrApocalypse) Edwards"
-	android:summary="Founder, Lead Developer"
-	android:enabled="false" />
+        android:key="hnic"
+        android:title="@string/hnic"
+	android:summary="Founder, Lead Developer" />
     
     </PreferenceCategory>
     

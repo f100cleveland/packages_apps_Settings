@@ -1331,6 +1331,8 @@
     
     <!-- About Screw'd -->
     <string name="about_screwd">About Screw\'d</string>
+    <string name="screwdota_title">OTA Updates</string>
+    <string name="screwdota_missing">ScrewdOTA not detected!!</string>
 
     <!-- Share Screwd -->
     <string name="screwd_website_title">Website</string>

@@ -19,24 +19,44 @@ import com.android.internal.logging.MetricsLogger;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.os.SystemProperties;
 import android.preference.Preference;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
+import android.util.Log;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class About extends SettingsPreferenceFragment {
 
-    public static final String TAG = "About";
+    public static final String TAG = "Screwd About";
+	private static final String KEY_SCREWD_OTA = "screwdota";
+	private static final String KEY_SCREWD_OTA_PACKAGE_NAME = "com.fusionjack.screwdota";
 
     private static final String KEY_SCREWD_SHARE = "share";
 	private static final String KEY_DEVICE_MAINTAINER = "device_maintainer";
@@ -44,6 +64,7 @@ public class About extends SettingsPreferenceFragment {
     Preference mSourceUrl;
     Preference mGoogleUrl;
 	Preference mSiteUrl;
+	Preference mScrewdOTA;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,6 +76,14 @@ public class About extends SettingsPreferenceFragment {
         mSourceUrl = findPreference("screwd_source");
         mGoogleUrl = findPreference("screwd_google_plus");
 		mSiteUrl = findPreference("screwd_website");
+		
+		mScrewdOTA = (PreferenceScreen) findPreference(KEY_SCREWD_OTA);
+		
+		if (!Utils.isPackageInstalled(getActivity(), KEY_SCREWD_OTA_PACKAGE_NAME)) {
+            //getPreferenceScreen().removePreference(mScrewdOTA);
+			mScrewdOTA.setEnabled(false);
+			mScrewdOTA.setTitle(R.string.screwdota_missing);
+        }
 
     }
 

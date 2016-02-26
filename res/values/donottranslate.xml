@@ -38,4 +38,5 @@
     <string name="category_key_personal">com.android.settings.category.personal</string>
     <string name="category_key_system">com.android.settings.category.system</string>
     <string name="category_key_screwd">com.android.settings.category.screwd</string>
+    <string name="hnic">Corey (MrApocalypse) Edwards</string>
 </resources>
