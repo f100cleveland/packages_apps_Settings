@@ -1439,4 +1439,11 @@
     <string name="no_filters_title">No filters set</string>
     <string name="app_ops_ignored_count">Denied <xliff:g id="count" example="2 times">%s</xliff:g></string>
     
+    <!-- Optional Dashboard Switches -->
+    <string name="dashboard_switches_title">Dashboard Switches</string>
+    <string name="dashboard_switches_off">Switches Off</string>
+    <string name="dashboard_switches_on">Switches On</string>
+    <string name="dashboard_switches_summary">Change the position of the dashboard switches</string>
+    <string name="dashboard_switches_dialog_title">Select switch state</string>
+    
 </resources>
