@@ -45,7 +45,7 @@ public class OnBoot extends BroadcastReceiver {
                     Context.MODE_PRIVATE);
             if(sharedpreferences.getBoolean("selinux", true)) {
                 CMDProcessor.runSuCommand("setenforce 1");
-                showToast("setenforce 1", context);
+                //showToast("setenforce 1", context);
             } else if (!sharedpreferences.getBoolean("selinux", true)) {
                 CMDProcessor.runSuCommand("setenforce 0");
                 showToast(context.getString(R.string.selinux_permissive_toast_title), context);
