@@ -15,6 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Screw'd Settings -->
   <string name="header_customize">Aanpassen</string>
   <string name="header_category_screwd">Screw\'d Instellingen</string>
   <string name="ui">Gebruikersinterface</string>
@@ -26,15 +27,17 @@
   <string name="power_menu">Power-menu</string>
   <string name="recents">Recents</string>
   <string name="lockscreen">Vergrendelscherm</string>
-  <string name="statusbar">Statusbar</string>
+  <string name="statusbar">Statusbalk</string>
   <string name="sounds">Geluiden &amp; Volume</string>
   <string name="kernel_tweaker">Kernel Adiutor</string>
   <string name="bitsyko_layers">Layers manager</string>
+  <string name="themes_settings_title">Themes</string>
+  <!-- Screw'd Settings cats-->
   <string name="sound_buttons_cat">Knoppen</string>
   <string name="sound_sounds_cat">Geluiden</string>
   <string name="interface_navbar_cat">NavBar opties</string>
   <string name="display_category_led_title">LED</string>
-  <string name="battery_title">Accu</string>
+  <string name="battery_title">Batterij</string>
   <string name="battery2_summary">Batterijpictogrammen en percentage aanpassen</string>
   <string name="notification_drawer_cat">Meldingenpaneel</string>
   <string name="lockscreen_options_title">Vergrendelscherm opties</string>
@@ -48,8 +51,10 @@
   <string name="statusbar_weather_cat">Weer opties</string>
   <string name="statusbar_general_cat">Algemene opties</string>
   <string name="maintainer_category">Builds voor dit apparaat worden verzorgd door</string>
+  <!-- Changelog -->
   <string name="changelog_screwd_title">Changelog</string>
   <string name="changelog_screwd_error">Kan changelog niet laden</string>
+  <!-- General strings -->
   <string name="ok">Ok</string>
   <string name="ok_string">Oké</string>
   <string name="reset">Reset</string>
@@ -86,26 +91,42 @@
   <string name="position_centered_title">Gecentreerd</string>
   <string name="reset_paranoid">Paranoid</string>
   <string name="reset_android">Android</string>
+  <!-- About phone screen, Screw'd version name-->
   <string name="mod_version">Screw\'d versie</string>
+  <!-- About phone screen, Screw'd unknown name-->
   <string name="mod_version_default">Onbekend</string>
+  <!-- About phone screen, build date of ROM -->
   <string name="build_date">Build datum</string>
   <string name="build_date_default">2012-01-01-0000</string>
+  <!--  About device screen, Hardware info -->
   <string name="hardware_info">Hardware info</string>
+  <!--  About device Screen, hardware info, rear camera -->
   <string name="device_rear_camera">Camera</string>
+  <!--  About device Screen, hardware info, front camera -->
   <string name="device_front_camera">Front camera</string>
+  <!--  About device Screen, hardware info, screen res -->
   <string name="device_screen_resolution">Schermresolutie</string>
+  <!--  About device Screen, hardware info, GPU info -->
   <string name="gpu_info">GPU</string>
+  <!-- About device screen, Cpu info. -->
   <string name="cpu_info">CPU</string>
+  <!-- About device screen, Chipset info -->
   <string name="chipset_info">Chipset</string>
+  <!-- About phone screen, Free memory info -->
   <string name="mem_info">Geheugen</string>
+  <!-- Volume rocker wake -->
   <string name="volume_rocker_wake_title">Volumetoets haalt het toestel uit slaapstand</string>
   <string name="volume_rocker_wake_summary">Op de volumetoetsen drukken zal uw apparaat wakker maken</string>
+  <!-- kill app long press back -->
   <string name="kill_app_longpress_back">Terugknop forceert afsluiten</string>
   <string name="kill_app_longpress_back_summary">App op de voorgrond geforceerd afsluiten door de terugknop lang ingedrukt te houden</string>
+  <!-- Double Tap Navbar to Sleep -->
   <string name="double_tap_sleep_nav_bar_title">Dubbel tikken om te slapen</string>
   <string name="double_tap_sleep_nav_bar_summary">Tik twee keer op navigatiebalk om het apparaat in slaapstand te brengen</string>
+  <!-- Double tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Dubbel tikken om te slapen</string>
   <string name="double_tap_to_sleep_summary">Dubbel tikken op de statusbar of bovenste en onderste derde deel van het snelkoppeling gedeelte om het scherm uit te schakelen</string>
+  <!-- Status bar - Battery -->
   <string name="status_bar_battery_style_title">Opmaak batterijstatus</string>
   <string name="status_bar_battery_style_icon_portrait">Icoon staand</string>
   <string name="status_bar_battery_style_icon_landscape">Icoon liggend</string>
@@ -113,17 +134,20 @@
   <string name="status_bar_battery_style_dotted_circle">Gestippelde cirkel</string>
   <string name="status_bar_battery_style_text">Tekst</string>
   <string name="status_bar_battery_style_hidden">Verborgen</string>
+  <!-- Battery percentage -->
   <string name="status_bar_battery_percentage_title">Toon batterij percentage</string>
   <string name="status_bar_battery_percentage_dialog_title">Batterij percentage</string>
   <string name="status_bar_battery_percentage_default">Verborgen (standaard)</string>
   <string name="status_bar_battery_percentage_text_inside">In het icoon</string>
   <string name="status_bar_battery_percentage_text_next">Naast het icoon</string>
+  <!-- Notification light dialogs -->
   <string name="edit_light_settings">Notificatie-led instellingen</string>
   <string name="pulse_speed_title">Pulslengte en snelheid</string>
   <string name="default_time">Normaal</string>
   <string name="custom_time">Aangepast</string>
   <string name="dialog_delete_title">Verwijder</string>
   <string name="dialog_delete_message">Geselecteerd item verwijderen?</string>
+  <!-- Values for the notification light pulse spinners -->
   <string name="pulse_length_always_on">Altijd aan</string>
   <string name="pulse_length_very_short">Zeer kort</string>
   <string name="pulse_length_short">Kort</string>
@@ -135,12 +159,15 @@
   <string name="pulse_speed_normal">Normaal</string>
   <string name="pulse_speed_slow">Langzaam</string>
   <string name="pulse_speed_very_slow">Zeer langzaam</string>
+  <!-- Battery light settings -->
   <string name="battery_light_title">Batterij LED</string>
   <string name="battery_low_pulse_title">Knipper indien de batterij bijna leeg is</string>
   <string name="battery_light_list_title">Kleuren</string>
   <string name="battery_light_low_color_title">Batterij bijna leeg</string>
   <string name="battery_light_medium_color_title">Opladen</string>
-  <string name="battery_light_full_color_title">Volledig opgeladen</string>
+  <string name="battery_light_full_color_title">Opgeladen (90%)</string>
+  <string name="battery_light_really_full_color_title">Opgeladen (100%)</string>
+  <!-- Lights settings screen, notification light settings -->
   <string name="notification_light_title">Notificatie-led</string>
   <string name="notification_light_general_title">Algemeen</string>
   <string name="notification_light_applist_title">Apps</string>
@@ -150,6 +177,7 @@
   <string name="notification_light_missed_call_title">Gemiste oproep</string>
   <string name="notification_light_voicemail_title">Voicemail</string>
   <string name="notification_light_screen_on">Notificatie-led met scherm aan</string>
+  <!-- Profiles -->
   <string name="profile_reset_title">Reset</string>
   <string name="profiles_add">Toevoegen</string>
   <string name="profile_choose_app">Kies app</string>
@@ -158,6 +186,7 @@
   <string name="select_custom_app_title">Selecteer aangepaste app</string>
   <string name="select_custom_activity_title">Selecteer aangepaste activiteit</string>
   <string name="systemuituner">System UI Tuner</string>
+  <!-- Color Picker -->
   <string name="dialog_color_picker_title">Kleurkiezer</string>
   <string name="press_color_to_apply">Druk op de kleur hieronder om toe te passen</string>
   <string name="palette_screwd_title">Screwd</string>
@@ -171,10 +200,13 @@
   <string name="hex">Hexcode:</string>
   <string name="hex_hint">#ff000000</string>
   <string name="set">Instellen</string>
+  <!-- Advanced reboot options -->
   <string name="advanced_reboot_title">Advanced reboot</string>
   <string name="advanced_reboot_summary">Indien ontgrendeld, reboot opties weergeven in het power menu voor recovery, bootloader of een soft reboot</string>
+  <!-- Advanced reboot options -->
   <string name="advanced_reboot_title">Advanced reboot</string>
   <string name="advanced_reboot_summary">Indien ontgrendeld, reboot opties weergeven in het power menu voor recovery, bootloader of een soft reboot</string>
+  <!-- Power menu -->
   <string name="power_menu_title">Power-menu</string>
   <string name="power_menu_power_title">Uitschakelen</string>
   <string name="power_menu_reboot_title">Herstart menu</string>
@@ -190,6 +222,7 @@
   <string name="powermenu_screenshot_delay_title">Stel schermafbeelding vertraging in</string>
   <string name="navigation_bar_left_title">Linkshandige modus</string>
   <string name="navigation_bar_left_summary">Plaats de navigatiebalk aan de linkerkant van het scherm in landscape-modus</string>
+  <!-- Doze options -->
   <string name="display_category_doze_options_title">Omgevingsdisplay</string>
   <string name="doze_settings_title">Geavanceerde Doze opties</string>
   <string name="doze_timeout_title">Doze pulse time-out</string>
@@ -208,6 +241,7 @@
   <string name="doze_schedule_summary_off">Doze geeft per notificatie een pulse</string>
   <string name="doze_brightness_title">Helderheidsniveau Doze</string>
   <string name="doze_brightness_summary">Helderheidsniveau van Doze pulse scherm (% van max helderheid)</string>
+  <!-- Recents panel -->
   <string name="recents_panel_category">Recents paneel</string>
   <string name="show_clear_all_recents_button_title">Sluit alle apps-knop</string>
   <string name="show_clear_all_recents_button_summary">Toon sluit alle apps-knop</string>
@@ -226,24 +260,35 @@
   <string name="recents_show_membar_summary">Toon een balk met het beschikbare geheugen van het apparaat</string>
   <string name="recents_clear_all_dismiss_all_title">Sluit alle taken</string>
   <string name="recents_clear_all_dismiss_all_summary">Voorgrond taak ook sluiten als recente apps gesloten worden</string>
+  <!-- Preference category for LAN development settings. [CHAR LIMIT=25] -->
   <string name="debug_LAN_category">LAN-instellingen</string>
+  <!-- Hostname setting -->
   <string name="device_hostname">Hostnaam apparaat</string>
+  <!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
   <string name="bluetooth_accept_all_files">Accepteer alle bestandstypen</string>
+  <!-- Quick settings quick pull down -->
   <string name="quick_pulldown_title">Snel openen</string>
   <string name="quick_pulldown_summary">%1$s van statusbalk opent Snelle instellingenpaneel</string>
+  <string name="quick_pulldown_summary_always">Altijd snelle instellingen op statusbalk pulldown weergeven</string>
   <string name="quick_pulldown_summary_left">Links</string>
   <string name="quick_pulldown_summary_right">Rechts</string>
   <string name="quick_pulldown_off">Uitgeschakeld</string>
   <string name="quick_pulldown_left">Links</string>
   <string name="quick_pulldown_right">Rechts</string>
+  <string name="quick_pulldown_always">Altijd</string>
+  <!-- Quick Settings brightness slider -->
   <string name="qs_brightness_slider_title_eos">Helderheid slider</string>
   <string name="qs_brightness_slider_summary">Toon helderheid slider in het snelle instellingen paneel</string>
+  <!-- QuickSettings haptic feedback -->
   <string name="quick_settings_vibrate_title">Trillen bij aanraking</string>
   <string name="quick_settings_vibrate_summary">Trillen bij het aanraken van de tegels</string>
+  <!-- QuickSettings 4 columns -->
   <string name="qs_four_columns_title">Toon vier tegels per rij</string>
+  <!-- QuickSettings main tiles -->
   <string name="qs_main_tiles_title">Vergroot de eerste rij</string>
   <string name="qs_main_tiles_summary_on">Twee belangrijkste tegels op de eerste rij</string>
   <string name="qs_main_tiles_summary_off">Drie of vier tegels op elke rij</string>
+  <!-- Display : Rotation -->
   <string name="display_rotation_title">Schermrotatie</string>
   <string name="display_rotation_disabled">Uitgeschaleld</string>
   <string name="display_rotation_unit">graden</string>
@@ -252,8 +297,10 @@
   <string name="display_rotation_90_title">90 graden</string>
   <string name="display_rotation_180_title">180 graden</string>
   <string name="display_rotation_270_title">270 graden</string>
+  <!-- EdgeGesture service -->
   <string name="edge_gesture_service_title">Blokkeer gesture aanrakingen</string>
   <string name="edge_gesture_service_summary">Stuur geen gesture aanrakingen voor navigatie naar apps</string>
+  <!-- Expanded desktop -->
   <string name="power_menu_expanded_desktop">Expanded desktop</string>
   <string name="expanded_hide_nothing">Niets verbergen</string>
   <string name="expanded_hide_status">Statusbalk verbergen</string>
@@ -266,10 +313,12 @@
   <string name="expanded_desktop_style">Expanded desktop stijl</string>
   <string name="expanded_desktop_style_description">Kies een standaard Expanded desktop stijl</string>
   <string name="expanded_desktop_title">Expanded desktop opties</string>
+  <!-- Heads up -->
   <string name="headsup_section_header">Heads-up notificaties</string>
   <string name="heads_up_notifications">Heads-up</string>
   <string name="summary_heads_up_enabled">Pop-up notificaties zijn ingeschakeld</string>
   <string name="summary_heads_up_disabled">Pop-up notificaties zijn uitgeschakeld</string>
+  <!-- Time-context headers in notification header -->
   <string name="contextual_title">Contextuele headers</string>
   <string name="status_bar_custom_header_title">Aangepaste header afbeelding</string>
   <string name="status_bar_custom_header_summary">Inschakelen header afbeeldingen meldingenpaneel</string>
@@ -277,14 +326,18 @@
   <string name="custom_header_image_0">Standaard</string>
   <string name="custom_header_image_1">Modern</string>
   <string name="custom_header_image_2">Poly HD</string>
+  <!-- Lock screen wallpaper -->
   <string name="lockscreen_settings_title">Vergrendelscherm achtergrond</string>
   <string name="lockscreen_wallpaper_title">Achtergrond</string>
   <string name="lockscreen_wallpaper_set_title">Instellen vergrendelscherm achtergrond</string>
   <string name="lockscreen_wallpaper_clear_title">Verwijderen vergrendelscherm achtergrond</string>
+  <!-- Status bar brightness control-->
   <string name="status_bar_toggle_brightness">Helderheidsregeling</string>
   <string name="status_bar_toggle_brightness_summary">Helderheid aanpassen door over de statusbalk te schuiven</string>
+  <!-- Battery saver color -->
   <string name="battery_saver_color_title">Waarschuwingskleur</string>
   <string name="battery_saver_color_summary">Oranje status en navigatiebalken inschakelen indien batterijbesparing is geactiveerd</string>
+  <!-- Lockscreen weather -->
   <string name="lockscreen_weather_title">Weer</string>
   <string name="lock_screen_weather_settings_title">Weer opties</string>
   <string name="weather_cat_notifications_title">Meldingen</string>
@@ -312,9 +365,11 @@
   <string name="weather_hide_panel_custom_summary">Het weerpaneel wordt verborgen als het aantal zichtbare meldingen het gekozen aantal bereikt</string>
   <string name="weather_hide_panel_never_summary">Het weerpaneel wordt niet verborgen</string>
   <string name="weather_number_of_notifications_title">Aantal notificaties</string>
+  <!-- Lockscreen blur/see through -->
   <string name="lockscreen_see_through_title">Blur</string>
   <string name="lockscreen_see_through_summary">Hiermee vervaagt en toont u de inhoud achter uw lockscreen</string>
   <string name="lockscreen_blur_radius">Blur effect intensiteit</string>
+  <!-- Status bar temperature -->
   <string name="status_bar_weather_cat">Weer</string>
   <string name="status_bar_temperature_title">Temperatuur</string>
   <string name="status_bar_temperature_hidden">Verborgen</string>
@@ -324,12 +379,16 @@
   <string name="status_bar_temperature_location_summary">Selecteer waar de temperatuur wordt weergegeven op de statusbalk</string>
   <string name="status_bar_temperature_location_right">Toon rechts</string>
   <string name="status_bar_temperature_location_left">Toon links</string>
+  <!-- Scramble pin -->
   <string name="unlock_scramble_pin_layout_title">Scramble lay-out</string>
   <string name="unlock_scramble_pin_layout_summary">Scramble PIN lay-out wanneer apparaat wordt ontgrendeld</string>
+  <!-- Weather in status bar -->
   <string name="status_bar_show_weather_title">Toon weer</string>
   <string name="status_bar_show_weather_summary">Toon het weer in de statusbalk header</string>
+  <!-- Notification counters -->
   <string name="status_bar_notif_count_title">Toon aantal meldingen</string>
   <string name="status_bar_notif_count_summary">Toon aantal wachtende meldingen</string>
+  <!-- Keyboard and Input methods  -->
   <string name="title_keyboard_input">IME-opties</string>
   <string name="disable_fullscreen_keyboard_title">Fullscreen toetsenbord uitschakelen</string>
   <string name="disable_fullscreen_keyboard_summary">Horizontaal toetsenbord zal nooit het volledige scherm vullen</string>
@@ -346,6 +405,7 @@
   <string name="ime_switcher_notify">Invoermethode melding</string>
   <string name="ime_switcher_notify_summary">Toon melding voor wijzigen invoermethode</string>
   <string name="attention">Opgelet</string>
+  <!-- Status bar | Network Traffic -->
   <string name="network_traffic_title">Netwerkverkeer</string>
   <string name="show_network_traffic_state">Dataverkeer weergave in statusbalk</string>
   <string name="show_network_traffic_unit">Weergave eenheid</string>
@@ -366,10 +426,13 @@
   <string name="network_traffic_color_style">Kleurstijl</string>
   <string name="network_traffic_color_reset">Herstel kleuren</string>
   <string name="network_traffic_color_reset_message">Dataverkeer kleur naar standaard resetten?</string>
+  <!-- Force expand notifications -->
   <string name="notification_force_expand_title">Forceer expanded notificaties</string>
   <string name="notification_force_expand_summary">Forceer expanded notificaties voor alle ondersteunde apps</string>
+  <!-- Media art -->
   <string name="media_art_title">Hoesafbeeldingen media</string>
   <string name="media_art_summary">Toon hoesafbeeldingen media op het vergrendelscherm</string>
+  <!-- Gesture Anywhere -->
   <string name="gesture_anywhere_title">Gesture Anywhere</string>
   <string name="gesture_anywhere_enabled_title">Gesture Anywhere</string>
   <string name="gesture_anywhere_enabled_summary">Inschakelen Gesture Anywhere</string>
@@ -378,23 +441,41 @@
   <string name="gesture_anywhere_position_right">Rechterrand</string>
   <string name="gesture_anywhere_gestures_title">Gebaren</string>
   <string name="gesture_anywhere_gestures_summary">Toevoegen, verwijderen en bewerken van gebaren</string>
+  <!-- Label, button used to add a gesture -->
   <string name="ga_button_add">Gebaar toevoegen</string>
+  <!-- Label, button used to reload all gestures -->
   <string name="ga_button_reload">Opnieuw laden</string>
+  <!-- Label, button used to cancel the operation of adding a gesture -->
   <string name="ga_button_discard">Verwijder</string>
+  <!-- Label, button used to save a gesture newly created -->
   <string name="ga_button_done">Gereed</string>
+  <!-- Label, prompt asking the user to enter the name of the gesture -->
   <string name="ga_prompt_gesture_name">Naam</string>
+  <!-- Error message, informs the user he needs to enter a name before saving a gesture -->
   <string name="ga_error_missing_name">U moet een naam invoeren</string>
+  <!-- success message, tells the user where the gesture was saved -->
   <string name="ga_save_success">Gebaar opgeslagen in %s</string>
+  <!-- Buttons in Rename gesture dialog box -->
   <string name="ga_rename_action">Ok</string>
+  <!-- Buttons in Rename gesture dialog box -->
   <string name="ga_cancel_action">Annuleren</string>
+  <!-- Message displayed when the user opens the gestures settings screen -->
   <string name="ga_gestures_loading">Gebaren laden...</string>
+  <!-- Message displayed when the user has no gestures -->
   <string name="ga_gestures_empty">Geen gebaren</string>
+  <!-- Title of the screen used to view/manage gestures -->
   <string name="ga_gestures_activity">Gebaren</string>
+  <!-- Noun, menu item used to edit a gesture -->
   <string name="ga_gestures_edit">Wijzigen</string>
+  <!-- Noun, menu item used to remove a gesture -->
   <string name="ga_gestures_delete">Verwijder</string>
+  <!-- Message displayed when a gesture is successfully deleted -->
   <string name="ga_gestures_delete_success">Gebaar verwijderd</string>
+  <!-- Title of dialog box -->
   <string name="ga_gestures_rename_title">Hernoem gebaar</string>
+  <!-- Label of gesture name field in Rename gesture dialog box -->
   <string name="ga_gestures_rename_label">Gebaar naam</string>
+  <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
   <string name="ga_gestures_error_loading">Kan %s niet laden. Zorg ervoor dat je opslag beschikbaar hebt.</string>
   <string name="trigger_category">Trigger region</string>
   <string name="trigger_width_title">Trigger breedte</string>
@@ -407,7 +488,9 @@
   <string name="select_custom_app_title">Selecteer aangepaste app</string>
   <string name="select_custom_activity_title">Selecteer aangepaste activiteit</string>
   <string name="profile_applist_title">Apps</string>
+  <!-- Lock screen rotation -->
   <string name="display_lockscreen_rotation_title">Vergrendelscherm</string>
+  <!-- Battery Bar -->
   <string name="battery_icon">Batterij icoon stijl</string>
   <string name="battery_not_title">Batterij icoon in notificaties</string>
   <string name="battery_not_summary">Batterij icoon is zichtbaar waar de clear all knop zichtbaar is</string>
@@ -419,7 +502,9 @@
   <string name="battery_bar_thickness_title">Dikte van batterij bar</string>
   <string name="battery_bar_animate_title">Animatie tijdens opladen</string>
   <string name="battery_bar_animate_summary">Oplaad animatie kan leiden tot een slechte gebruikservaring. Inschakelen op eigen risico.</string>
+  <!-- Restart SystemUI -->
   <string name="restart_systemui">SystemUI herstarten</string>
+  <!-- SlimDim -->
   <string name="dim_nav_buttons_category">SlimDim</string>
   <string name="dim_nav_buttons_title">Dim knoppen na inactiviteit</string>
   <string name="dim_nav_buttons_summary">Dim navigatiebalkknoppen na geen interactie met navigatiebalk gedurende een bepaalde tijd</string>
@@ -434,6 +519,7 @@
   <string name="dim_nav_buttons_touch_anywhere_title">Luisteren naar aanrakingen op volledige scherm</string>
   <string name="dim_nav_buttons_touch_anywhere_summary_on">Tik ergens op het scherm om de knoppen te un-dimmen</string>
   <string name="dim_nav_buttons_touch_anywhere_summary_off">Tik op de navigitiebalk om de knoppen te un-dimmen</string>
+  <!-- Slim DSLV -->
   <string name="shortcut_action_none">Geen</string>
   <string name="shortcut_action_longpress">Lang indrukken:</string>
   <string name="shortcut_action_select_action_longpress">Kies langdruk actie:</string>
@@ -514,7 +600,13 @@
   <string name="shortcuts_icon_picker_tv">TV</string>
   <string name="shortcuts_icon_picker_twitter">Twitter</string>
   <string name="shortcuts_icon_picker_unlock">Ontgrendelen</string>
+  <!-- Button shorcut actions -->
   <string name="shortcut_action_back">Terug</string>
+  <string name="shortcut_action_camera">Camera</string>
+  <string name="shortcut_action_media_next">Muziek - volgende track</string>
+  <string name="shortcut_action_media_play_pause">Muziek - afspelen/pauzeren</string>
+  <string name="shortcut_action_media_previous">Muziek - vorige track</string>
+  <string name="shortcut_action_wake_device">Apparaat ontwaken</string>
   <string name="shortcut_action_app">Aangepaste app</string>
   <string name="shortcut_action_expanded_desktop">Expanded desktop</string>
   <string name="shortcut_action_home">Home</string>
@@ -541,6 +633,7 @@
   <string name="shortcut_action_torch">Zaklamp</string>
   <string name="shortcut_action_voice_search">Gesproken zoekopdrachten</string>
   <string name="shortcut_action_none">Geen</string>
+  <!-- Navigation bar -->
   <string name="navigation_bar_size_42_dp_default">42 dp (standaard)</string>
   <string name="navigation_bar_size_36_dp">36 dp</string>
   <string name="navigation_bar_size_30_dp">30 dp</string>
@@ -578,6 +671,7 @@
   <string name="navbar_dimensions_reset_message">Alle afmetingen naar beginwaarden herstellen?</string>
   <string name="navbar_button_style_reset_message">Alle stijlen herstellen naar standaard?</string>
   <string name="shortcut_action_required_warning_message">Het is niet mogelijk om de vereiste knoppen te verwijderen</string>
+  <!-- Navigation bar button style -->
   <string name="nav_bar_button_style">Knopstijl</string>
   <string name="nav_bar_button_style_summary">Knopstijl van de navigatiebalk wijzigen</string>
   <string name="button_transparency_title">Knop transparantie</string>
@@ -616,12 +710,14 @@
   <string name="shortcut_action_help_main">Om een %1$s toe te voegen, selecteer het Toevoeg icoon. Op het moment dat %1$s is toegevoegd, zal het selecteren van de rij het doel aanpassen%2$s\n\nSleep de rij horizontaal naar links of naar rechts om een %1$s te verwijderen. Herschik %1$s in de lijst door vertikaal te slepen naar het ankerpunt aan de linkerzijde.\n\nOm alles te herstellen naar standaard waarden, selecteer het Herstel icoon.</string>
   <string name="shortcut_action_help_delete_last_entry">Alle %1$s verwijderen uit de lijst zal de functie volledig uitschakelen.</string>
   <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Alle %1$s verwijderen in de lijst zal de tweede Pie ring volledig uitschakelen.</string>
+  <!-- Lockscreen shortcuts -->
   <string name="lockscreen_shortcuts_title">Vergrendelscherm snelkoppelingen</string>
   <string name="lockscreen_shortcuts_summary">Verander de snelkoppelingen op het vergrendelscherm naar behoefte</string>
   <string name="lockscreen_shorcuts_launch_type_title">Snelkoppeling klik op type</string>
   <string name="lockscreen_shortcuts_single_tap">Klik</string>
   <string name="lockscreen_shortcuts_double_tap">Dubbel Tik</string>
   <string name="lockscreen_shortcuts_longpress">Lang indrukken</string>
+  <!-- AOKP custom system animations -->
   <string name="animation_title">Animaties</string>
   <string name="system_animation_title">Systeem animaties</string>
   <string name="activity_open_title">Animatie voor openen activiteit</string>
@@ -638,6 +734,7 @@
   <string name="title_animation_no_override">Voorkom afdwingen door app</string>
   <string name="summary_animation_no_override">Voorkom dat apps transities afdwingen</string>
   <string name="animation_duration_default">Standaard</string>
+  <!-- Toast Animation -->
   <string name="toast_animation_title">Toast animatie</string>
   <string name="toast_none_animation">Geen</string>
   <string name="toast_default_animation">Standaard</string>
@@ -668,6 +765,7 @@
   <string name="shortcut_picker_icon_type_system_title">Systeem iconen</string>
   <string name="shortcut_picker_select_system_icon_title">Selecteer systeem icoon:</string>
   <string name="shortcut_picker_icon_type_custom_title">Galerij</string>
+  <!-- ListView animation -->
   <string name="listview_animation_title">ListView animatie</string>
   <string name="listview_off">Standaard</string>
   <string name="listview_wave_left">Golf (links)</string>
@@ -680,6 +778,7 @@
   <string name="listview_fold">Vouwen</string>
   <string name="listview_translate_left">Vertalen (links)</string>
   <string name="listview_translate_right">Vertalen (rechts)</string>
+  <!-- ListView interpolator -->
   <string name="listview_interpolator_title">ListView interpolator</string>
   <string name="listview_accelerate_interpolator">Versnellen</string>
   <string name="listview_decelerate_interpolator">Vertragen</string>
@@ -688,11 +787,14 @@
   <string name="listview_overshoot_interpolator">Overschrijden</string>
   <string name="listview_anticipate_overshoot_interpolator">Anticiperen en overschrijden</string>
   <string name="listview_bounce_interpolator">Stuiteren</string>
+  <!-- Disabling FC notifications -->
   <string name="disable_fc_notifications_title">FC notificaties uitschakelen</string>
   <string name="disable_fc_notifications_summary">Dit zal alle force close notificaties verbergen</string>
+  <!-- Doze notification color invert -->
   <string name="doze_notification_color_invert_title">Kleur inversie</string>
   <string name="doze_notification_color_invert_summary_off">Kleuren van omgevingsdisplay meldingen worden niet omgekeerd. Gebruik voor donkere thema\'s.</string>
   <string name="doze_notification_color_invert_summary_on">Kleuren van omgevingsdisplay meldingen worden omgekeerd. Gebruik voor lichte/stock thema\'s.</string>
+  <!-- Breathing Notifications -->
   <string name="breathing_notifications_title">Breathing notificaties</string>
   <string name="breathing_notifications_summary">Selecteer welke breathing notificaties u in de statusbalk wilt</string>
   <string name="sms_breath_title">Breathing SMS</string>
@@ -701,27 +803,43 @@
   <string name="missed_call_breath_summary">Geeft uw gemiste oproep notificaties een breathing effect in de statusbalk</string>
   <string name="voicemail_breath_title">Breathing voicemail</string>
   <string name="voicemail_breath_summary">Geeft uw voicemail notificaties een breathing effect in de statusbalk</string>
+  <!-- Toast Icons -->
   <string name="toast_icon_title">Toast icoon</string>
   <string name="toast_icon_summary">Toon de app die de toast laat zien</string>
+  <!--Power menu on lockscreen -->
   <string name="power_category">Power-menu</string>
   <string name="lockscreen_enable_power_menu_title">Toon power-menu op vergrendelscherm</string>
   <string name="lockscreen_enable_power_menu_summary">Deze optie schakelt het power-menu uit op een beveiligd vergrendelscherm</string>
+  <!-- Media ducking -->
   <string name="interruptions_ignore_while_media_title">Voorkomen audio ducking</string>
   <string name="interruptions_ignore_while_media_summary">Niet het mediavolume verminderen wanneer er een notificatie aankomt</string>
+  <!-- Navbar cursor buttons -->
   <string name="show_ime_arrows_title">Toon pijltoetsen tijdens het typen</string>
   <string name="show_ime_arrows_summary">Toon linker en rechter cursor knoppen voor IME.</string>
+  <!-- LCD Density -->
+  <string name="lcd_density">LCD dichtheid</string>
+  <string name="dialog_title_lcd_density">LCD dichtheid</string>
+  <string name="lcd_density_value_format">%d DPI</string>
+  <string name="lcd_density_default_value_format">%d DPI (standaard)</string>
+  <string name="restarting_ui">UI Herstarten\u2026</string>
+  <!-- Disable animations -->
   <string name="disable_animations">Animaties uitschakelen</string>
   <string name="disable_animations_summary">Transitie animaties uitschakelen zoals wanneer een app start</string>
+  <!-- Keep screen on strings -->
   <string name="keep_screen_on_never">Nooit</string>
   <string name="keep_screen_on_debugging">Tijdens USB debugging</string>
   <string name="keep_screen_on_charging">Tijdens het opladen</string>
+  <!-- CM Lockscreen shortcuts -->
   <string name="lockscreen_targets_message">Onderste snelkoppelingen</string>
+  <!-- AOSP MultiWindow -->
   <string name="multiwindow_settings_title">Multi venster</string>
   <string name="enable_multi_window">Multi venstermodus</string>
   <string name="enable_multi_window_summary">Meerdere activiteiten op scherm op hetzelfde moment.</string>
   <string name="warning_multi_window_text">Waarschuwing: Dit is een zeer experimentele functie waarmee meerdere activiteiten op het scherm op hetzelfde moment plaatsvinden door de recente apps UI. Sommige apps kunnen crashen of niet goed werken wanneer ze gebruikt worden met deze functie.</string>
+  <!-- Qucik unlock -->
   <string name="unlock_quick_unlock_control_title">Snel ontgrendelen</string>
   <string name="unlock_quick_unlock_control_summary">Automatisch ontgrendelen bij ingeven juiste PIN-Code/Wachtwoord</string>
+  <!-- OmniSwitch -->
   <string name="omniswitch_category">OmniSwitch</string>
   <string name="recents_use_omniswitch_title">Gebruik voor recente apps</string>
   <string name="recents_use_omniswitch_summary">Gebruik OmniSwitch in plaats van de recente apps</string>
@@ -730,19 +848,25 @@
   <string name="omniswitch_first_time_title">Informatie</string>
   <string name="omniswitch_first_time_message">Zorg ervoor dat u OmniSwitch hebt ingeschakeld. U kunt dit doen met behulp van \'Instellingen\' hieronder</string>
   <string name="omniswitch_settings_title">OmniSwitch</string>
+  <!-- Swap volume buttons when the screen is rotated -->
   <string name="swap_volume_buttons_title">Wissel bij rotatie</string>
   <string name="swap_volume_buttons_summary">Actie van volumeknoppen aanpassen aan huidige rotatie</string>
+  <!-- Option to enable/disable scrolling cache -->
   <string name="pref_scrollingcache_title">Scrolling cache</string>
   <string name="pref_scrollingcache_summary">Scrolling cache probeert scroll prestaties te optimaliseren ten koste van geheugen</string>
   <string name="pref_scrollingcache_force_enable">Gedwongen inschakelen</string>
   <string name="pref_scrollingcache_default_enable">Standaard inschakelen</string>
   <string name="pref_scrollingcache_default_disable">Standaard uitschakelen</string>
   <string name="pref_scrollingcache_force_disable">Forceer uitschakelen</string>
+  <!-- Android debugging over WiFi -->
   <string name="adb_over_network">ADB over het netwerk</string>
   <string name="adb_over_network_summary">TCP/IP-foutopsporing inschakelen over netwerkinterfaces (Wi-Fi, USB-netwerken etc.). Instelling wordt gereset bij opstarten</string>
+  <!-- Warning for Adb over Network -->
   <string name="adb_over_network_warning">WAAARSCHUWING: Als ADB over het netwerk is ingeschakeld, is je telefoon open voor inbraken van alle verbonden netwerken, Ook het GSM datanetwerk!\n\nGebruiken deze optie alleen als je verbonden bent met een vertrouwd netwerk.\n\nWeet u zeker dat u deze funtie wilt inschakelen?</string>
+  <!-- Wake on Plug -->
   <string name="wake_when_plugged_or_unplugged_title">Ontwaak bij lader</string>
   <string name="wake_when_plugged_or_unplugged_summary">Het scherm inschakelen wanneer bij aansluiten of loskoppelen van de lader</string>
+  <!-- Carrier label -->
   <string name="carrier_title">Provider label</string>
   <string name="carrier_options_summary">Provider label aanpassen</string>
   <string name="custom_carrier_label_title">Aangepast Provider label</string>
@@ -753,13 +877,16 @@
   <string name="show_carrier_keyguard">Alleen vergrendelscherm</string>
   <string name="show_carrier_statusbar">Alleen statusbalk</string>
   <string name="show_carrier_enabled">Vergrendelscherm &amp; statusbalk</string>
+  <!-- Volume Keys Media Control -->
   <string name="volume_keys_control_media_stream">Media bediening</string>
   <string name="volume_keys_control_media_stream_summary">Volumetoetsen passen media volume aan in plaats van meldingen</string>
+  <!-- Immersive Recents-->
   <string name="immersive_recents_title">Verzonken Recents</string>
   <string name="immersive_recents_default">Standaard</string>
   <string name="immersive_recents_fullscreen">Volledig scherm</string>
   <string name="immersive_recents_statusbar">Alleen statusbalk</string>
   <string name="immersive_recents_navbar">Alleen Navbar</string>
+  <!-- Blacklist preferences -->
   <string name="blacklist_title">Geblokkeerde bellerlijst</string>
   <string name="blacklist_edit_dialog_title">Geblokkeerd telefoonnummer bewerken</string>
   <string name="blacklist_prefs">Instellingen</string>
@@ -783,18 +910,23 @@
   <string name="blacklist_policy_block_calls">Binnenkomende oproepen blokkeren</string>
   <string name="blacklist_policy_block_messages">Blokkeer inkomende berichten</string>
   <string name="blacklist_bad_number_add">Ongeldig telefoonnummer toevoegen aan geblokkeerde bellerlijst is niet mogelijk</string>
+  <!-- Blacklist management -->
   <string name="remove_blacklist_number_title">Nummer verwijderen</string>
   <string name="remove_blacklist_entry">Wilt u dit geblokkeerde telefoonnummer verwijderen?</string>
   <string name="select_contact">Selecteer contactpersoon</string>
+  <!-- Privacy Settings Header item -->
   <string name="privacy_settings_cyanogenmod_title">Privacy</string>
   <string name="app_ops_summary">Beheer app machtigingen met meer mogelijkheden</string>
+  <!-- Linked / unlinked notification volume -->
   <string name="link_volume_option_title">Volumes van beltoon en meldingen koppelen</string>
   <string name="notification_volume_option_title">Volume meldingen</string>
   <string name="ring_notification_volume_option_title">Volume beltoon en meldingen</string>
+  <!-- Volume buttons for DND -->
   <string name="volbtn_down_zen_title">Volume omlaag in stille modus</string>
   <string name="volbtn_down_zen_summary">toestaan dat volume omlaag de niet storen modus activeert</string>
   <string name="volbtn_up_zen_title">Volume omhoog in niet storen modus</string>
   <string name="volbtn_up_zen_summary">toestaan dat volume omhoog de niet storen modus deactiveert</string>
+  <!-- PA Pie control -->
   <string name="pa_piecontrol_settings_summary">PA Pie 2.0 targets, stijl, grootte en kleur aanpassen</string>
   <string name="pa_pie_control_title">PA Pie control</string>
   <string name="pa_pie_control_enable_title">Pie Control inschakelen</string>
@@ -858,9 +990,11 @@
   <string name="pa_pie_button_color_title">Knoppen Kleur</string>
   <string name="pa_pie_always_right_title">Pie altijd rechts</string>
   <string name="pa_pie_always_right_summary">Toon Pie altijd rechts bij horizontaal scherm</string>
+  <!-- On-The-Go -->
   <string name="power_menu_onthego_title">On-The-Go modus</string>
   <string name="onthego_alpha_title">On-The-Go Alpha</string>
   <string name="onthego_alpha_summary">Alpha-waarde van de On-The-Go-overlay.</string>
+  <!-- Volume Steps -->
   <string name="volume_steps_title">Volume stappen</string>
   <string name="volume_steps_alarm_title">Volume stappen: Alarm</string>
   <string name="volume_steps_dtmf_title">Volume stappen: DTMF</string>
@@ -876,6 +1010,7 @@
   <string name="volume_steps_15">15</string>
   <string name="volume_steps_7">7</string>
   <string name="volume_steps_5">5</string>
+  <!-- App Circle sidebar -->
   <string name="category_app_circle_bar_title">App launcher</string>
   <string name="app_circle_bar_title">App cirkelbalk</string>
   <string name="app_circle_bar_summary">Toon cirkel app launcher na het aanraken van de rechterkant van het scherm</string>
@@ -887,8 +1022,10 @@
   <string name="trigger_top_summary">Pas de verticale positie van het triggergebied aan</string>
   <string name="trigger_bottom_title">Trigger hoogte</string>
   <string name="trigger_bottom_summary">Pas de hoogte van het triggergebied aan</string>
+  <!-- Break SystemUI Tuner into two parts -->
   <string name="status_bar_icon_blacklist_title">Statusbalk iconen</string>
   <string name="status_bar_icon_blacklist_summary">Stel in welke iconen worden weergegeven op statusbalk</string>
+  <!-- Recent panel -->
   <string name="recent_panel_category">Recent apps paneel</string>
   <string name="use_slim_recents_title">Slim Recents</string>
   <string name="show_running_tasks_title">Toon alleen actieve apps</string>
@@ -904,6 +1041,7 @@
   <string name="recent_panel_bg_color_title">Paneel achtergrondkleur</string>
   <string name="recent_card_bg_color_title">Kaart achtergrondkleur</string>
   <string name="recent_card_text_color_title">Kaart tekstkleur</string>
+  <!-- ATTENTION: RTL languages need to replace left with right -->
   <string name="recent_panel_lefty_mode_title">Toon op de linkerrand</string>
   <string name="recent_panel_lefty_mode_summary">Recente apps paneel aan de linkerkant weergeven</string>
   <string name="default_string">Standaard</string>
@@ -916,8 +1054,10 @@
   <string name="recent_app_sidebar_label_color_title">Labelkleur</string>
   <string name="recent_app_sidebar_bg_color_title">Achtergrondkleur</string>
   <string name="recent_app_sidebar_scale_title">Afmeting</string>
+  <!-- Volume button music seek -->
   <string name="volbtn_music_controls_title">Muziek bediening</string>
   <string name="volbtn_music_controls_summary">Wanneer het scherm uit is, zal langdurig drukken op de volume knoppen muziek tracks zoeken</string>
+  <!-- Power menu Animations  -->
   <string name="power_menu_animation_title">Animatie Powermenu</string>
   <string name="power_menu_animation_summary">Verander de in/uit animatie van het Powermenu</string>
   <string name="power_menu_animation_dialog_title">Selecteer Powermenu animatie</string>
@@ -932,6 +1072,7 @@
   <string name="power_menu_animation_card">3D</string>
   <string name="power_menu_animation_translucent_top">Doorzichtig (boven)</string>
   <string name="power_menu_animation_translucent_bottom">Doorzichtig (onder)</string>
+  <!-- Statusbar Clock options -->
   <string name="status_bar_title">Statusbalk</string>
   <string name="status_bar_style_title">Stijl</string>
   <string name="status_bar_clock">Klok en datum</string>
@@ -972,6 +1113,7 @@
   <string name="status_bar_clock_style_reset_message">Reset klok kleur?</string>
   <string name="default_string">Standaard</string>
   <string name="reset">Reset</string>
+  <!-- QS -->
   <string name="qs_settings_title">QS tegels</string>
   <string name="qs_category_title">Quick Settings</string>
   <string name="qs_order_title">Selecteer en arrangeerde tegels</string>
@@ -984,35 +1126,16 @@
   <string name="qs_main_tiles_title">Vergroot de eerste rij</string>
   <string name="qs_main_tiles_summary_on">Twee belangrijkste tegels op de eerste rij</string>
   <string name="qs_main_tiles_summary_off">Drie of vier tegels op elke rij</string>
-  <string name="qs_tile_adb_over_network">ADB over het netwerk</string>
-  <string name="qs_tile_ambient_display">Omgevingsdisplay</string>
-  <string name="qs_tile_nfc">NFC</string>
-  <string name="qs_tile_wifi">Wi\u2011Fi</string>
-  <string name="qs_tile_bluetooth">Bluetooth</string>
-  <string name="qs_tile_compass">Kompas</string>
-  <string name="qs_tile_screen_timeout">Scherm time-out</string>
-  <string name="qs_tile_sync">Sync</string>
-  <string name="qs_battery_saver_tile">Accubesparing</string>
-  <string name="qs_brightness_tile">Helderheid</string>
-  <string name="qs_screen_off_tile">Scherm uit</string>
-  <string name="qs_screenshot_tile">Schermafbeelding</string>
-  <string name="qs_expanded_desktop_tile">Expanded desktop</string>
-  <string name="qs_tile_display_inversion">Kleur inversie</string>
-  <string name="qs_tile_dnd">Niet storen</string>
-  <string name="qs_tile_cellular_data">Dataverbinding</string>
-  <string name="qs_tile_airplane_mode">Vliegtuigmodus</string>
-  <string name="qs_tile_display_rotation">Schermrotatie</string>
-  <string name="qs_tile_flashlight">Zaklamp</string>
-  <string name="qs_tile_location">Locatie</string>
-  <string name="qs_tile_cast_screen">Cast scherm</string>
-  <string name="qs_tile_hotspot">Hotspot</string>
-  <string name="qs_tile_volume_panel">Volumepaneel</string>
-  <string name="qs_tile_reboot">Opnieuw opstarten</string>
-  <string name="qs_navbar_tile">Navigatiebalk</string>
   <string name="qs_four_columns_title">Toon vier tegels per rij</string>
   <string name="qs_advanced_location_title">Geavanceerde locatie-instellingen</string>
   <string name="qs_advanced_location_summary">Geavanceerde instellingen voor de locatie in snelle instellingen inschakelen</string>
   <string name="quick_settings_reset_message">Reset snelle instellingen tegels?</string>
+  <string name="quick_settings_title">Tegel configuratie</string>
+  <string name="quick_settings_summary">Configureren van QS tegels</string>
+  <string name="qs_num_columns_title">Aantal tegels per rij</string>
+  <string name="qs_num_columns_showing">%1$s tegels per rij weergegeven</string>
+  <string name="qs_main_tiles_summary">Twee belangrijkste tegels op de eerste rij</string>
+  <!-- Color Picker -->
   <string name="dialog_color_picker">Kleurkiezer</string>
   <string name="press_color_to_apply">Druk op de kleur hieronder om toe te passen</string>
   <string name="arrow_right">→</string>
@@ -1021,14 +1144,19 @@
   <string name="hex_hint">#ff000000</string>
   <string name="set">Instellen</string>
   <string name="color_default">Standaard</string>
+  <!-- Instant reboot -->
   <string name="advanced_reboot_oneclick">Met één klik herstarten</string>
   <string name="advanced_reboot_oneclick_summary">Direct de herstart actie triggeren</string>
+  <!--Fingerprint auth vibration -->
   <string name="fprint_sucess_vib_title">Vingerafdruk verificatie vibratie</string>
   <string name="fprint_sucess_vib_summary">Trillen bij succesvolle vingerafdruk authenticatie</string>
+  <!-- Lockscreen Torch toggle -->
   <string name="keyguard_torch_title">Vergrendelscherm zaklamp</string>
   <string name="keyguard_torch_summary">Powerknop lang indrukken bij vergrendeld scherm doet zaklamp aan</string>
+  <!-- Disable OS on LS -->
   <string name="block_on_secure_keyguard_title">Uitschakelen op vergrendelscherm</string>
   <string name="block_on_secure_keyguard_summary">Snelle instellingen uitschakelen op beveiligd vergrendelscherm</string>
+  <!-- Less notification sounds -->
   <string name="advanced_sound_title">Geavanceerde opties</string>
   <string name="sound_title">Geluid</string>
   <string name="safe_headset_volume_title">Veilig headsetvolume</string>
@@ -1050,32 +1178,46 @@
   <string name="camera_sounds_title">Sluitergeluid</string>
   <string name="camera_sounds_summary">Sluitergeluid inschakelen</string>
   <string name="camera_sound_warning_dialog_text">Uitschakelen van het sluitergeluid is verboden in sommige gebieden! Controleer het toepasselijk recht in uw land</string>
+  <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Schermafbeelding geluid</string>
   <string name="screenshot_sound_summary">Speelt geluidseffect wanneer schermafbeelding is genomen</string>
+  <!-- Seconds clock -->
   <string name="status_bar_show_clock_second_title">Klok seconden</string>
+  <!-- QS shade transparency -->
   <string name="qs_transparent_shade">Transparantie QS shade</string>
+  <!-- QS header transparency -->
   <string name="qs_transparent_header">Transparantie QS header</string>
+  <!-- Volume dialog transparency -->
   <string name="volume_dialog_transparency">Transparantie volume venster</string>
+  <!-- Power menu and dialogs transparency -->
   <string name="power_menu_transparency">Transparantie Power/Rebootmenu</string>
+  <!-- Lock cLock -->
   <string name="lock_clock_title">Lock cLock instellingen</string>
   <string name="lock_clock_summary">Weergeven of wijzigen hoe de widget \'cLock\' wordt weergegeven.</string>
+  <!-- Dashboard settings -->
+  <string name="dashboard_category">Dashboard instellingen</string>
   <string name="dashboard_columns_title">Dashboard kolommen</string>
   <string name="dashboard_columns_summary">Wijzig het aantal kolommen weergegeven in het dashboard</string>
   <string name="dashboard_columns_dialog_title">Selecteer dashboard kolommen</string>
-  <string name="dashboard_columns_default">Een (standaard)</string>
+  <string name="dashboard_columns_one">Een</string>
   <string name="dashboard_columns_two">Twee</string>
   <string name="dashboard_columns_three">Drie</string>
-  <string name="dashboard_category">Dashboard instellingen</string>
-  <string name="dashboard_tileview_double_lines_title">Titel dashboardtegel weergave</string>
-  <string name="dashboard_tileview_double_lines_summary_on">Toon dashboardtegel titels in 1 lijn</string>
-  <string name="dashboard_tileview_double_lines_summary_off">Toon dashboardtegel titels in 2 lijnen</string>
+  <string name="dashboard_tileview_double_lines_title">Dashboard titelweergave</string>
+  <string name="dashboard_tileview_double_lines_summary">Toon dashboardtegel titels in 2 regels</string>
+  <string name="dashboard_tileview_dividers_title">Dashboard scheidingslijnen</string>
+  <string name="dashboard_tileview_dividers_summary">Verberg dashboard scheidingslijnen</string>
+  <!-- About Screw'd -->
   <string name="about_screwd">Over Screw\'d</string>
+  <string name="screwdota_title">OTA Updates</string>
+  <string name="screwdota_missing">ScrewdOTA niet gevonden!!</string>
+  <!-- Share Screwd -->
   <string name="screwd_website_title">Website</string>
   <string name="screwd_website_summary">Bezoek onze website voor meer info!</string>
   <string name="share_screwd_title">Deel Screw\'d</string>
   <string name="share_screwd_summary">Laat anderen weten over Screw\'d</string>
   <string name="share_message">Bezoek ons op Google+ https://plus.google.com/communities/109777359391119326629</string>
   <string name="share_chooser_title">Deel Screw\'d</string>
+  <!-- Screw'd Sites -->
   <string name="sites_screwd">Nuttige links</string>
   <string name="screwd_source_title">Github</string>
   <string name="screwd_source_summary">Bekijk de source van de ROM</string>
@@ -1087,6 +1229,82 @@
   <string name="maintainer_default">Onbekend</string>
   <string name="maintainer_default_summary">Helaas, er is geen maintainer voor dit apparaat!</string>
   <string name="devs">Ontwikkelaars</string>
+  <!-- Navbar cursor buttons -->
   <string name="show_ime_arrows_title">Toon pijltoetsen tijdens het typen</string>
   <string name="show_ime_arrows_summary">Toon linker en rechter cursor knoppen voor IME.</string>
+  <!-- Keyguard notifications options -->
+  <string name="app_notification_show_on_keyguard_title">Weergave op vergrendelscherm</string>
+  <string name="app_notification_show_on_keyguard_summary">Toon meldingen van deze app op vergrendelscherm</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">Doorlopende notificatie op vergrendelscherm uitgeschakeld</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">Nooit doorlopende notificaties van deze app weergeven op vergrendelscherm</string>
+  <!-- Increasing ring tone volume -->
+  <string name="increasing_ring_volume_option_title">Oplopend beltoon volume</string>
+  <string name="increasing_ring_min_volume_title">Start volume</string>
+  <string name="increasing_ring_ramp_up_time_title">Oploop tijd</string>
+  <!-- Task Manager -->
+  <string name="enable_task_manager_title">Taakbeheer</string>
+  <string name="enable_task_manager_summary">In-/Uitschakelen van de taakbeheer knop in de uitgebreide statusbalk</string>
+  <!--Heads Up -->
+  <string name="heads_up_notifications">Heads-up</string>
+  <string name="heads_up_snooze">Sluimeren</string>
+  <string name="heads_up_timeout">Time-out</string>
+  <string name="add_heads_up_package">App toevoegen</string>
+  <string name="add_heads_up_dnd_summary">Heads up in deze apps niet weergeven</string>
+  <string name="add_heads_up_whitelist_summary">Geef alle notificaties van deze apps weer in heads up</string>
+  <string name="add_heads_up_blacklist_summary">Heads up van deze apps niet weergeven</string>
+  <string name="heads_up_dnd_title">Niet storen</string>
+  <string name="heads_up_blacklist_title">Blacklist</string>
+  <string name="heads_up_whitelist_title">Whitelist</string>
+  <string name="heads_up_contains_key">Deze app is al toegevoegd aan de lijst</string>
+  <!-- Hide lockscreen clock & date -->
+  <string name="hide_lockscreen_clock_title">Geef vergrendelscherm klok weer</string>
+  <string name="hide_lockscreen_date_title">Geef vergrendelscherm datum weer</string>
+  <!-- Selinux Switch -->
+  <string name="selinux_switch_title">Selinux schakelopties</string>
+  <string name="selinux_switch_summary">SELinux is een set kernel wijzigingen en hulpmiddelen van de user-space. Veranderen van modus kan ongewenste effecten veroorzaken. Gebruik op eigen risico.</string>
+  <string name="selinux_title">Selinux modus</string>
+  <string name="selinux_permissive_title">Permissive</string>
+  <string name="selinux_enforcing_title">Enforcing</string>
+  <string name="selinux_permissive_toast_title">Selinux ingesteld op permissive</string>
+  <!-- Smart Pulldown -->
+  <string name="smart_pulldown_title">Slim openen</string>
+  <string name="smart_pulldown_summary">Open snelle instellingen als er %1$s notificaties zijn</string>
+  <string name="smart_pulldown_off">Uitgeschakeld</string>
+  <string name="smart_pulldown_dismissable">Niet dismissable</string>
+  <string name="smart_pulldown_persistent">Niet persistent</string>
+  <string name="smart_pulldown_all">Geen dismissable of persistent</string>
+  <!-- Statusbar SCREW'D logo -->
+  <string name="status_bar_screwd_logo_title">Screw\'d logo</string>
+  <string name="status_bar_screwd_logo_summary">Inschakelen om Screw\'d logo weer te geven links op de statusbalk</string>
+  <string name="status_bar_screwd_logo_color">Kleur Screw\'d logo</string>
+  <string name="statusbar_logo_off">Geen logo</string>
+  <string name="statusbar_logo_static">Niet geanimeerd</string>
+  <string name="statusbar_logo_animated">Geanimeerd</string>
+  <!-- Flashlight notification -->
+  <string name="flashlight_notification_title">Zaklamp notificatie</string>
+  <string name="flashlight_notification_summary">Inschakelen notificatie wanneer de zaklamp ingeschakeld is</string>
+  <!--Secure lockscreen bouncer -->
+  <string name="ls_bouncer_title">Beveiligd vergrendelscherm portier</string>
+  <string name="ls_bouncer_summary">Open vergrendelscherm direct op pin/patroon/wachtwoord wanneer er %1$s notificaties aanwezig zijn</string>
+  <string name="ls_bouncer_on">Aan (standaard)</string>
+  <string name="ls_bouncer_on_summary">Standaard gedrag portier</string>
+  <string name="ls_bouncer_off">Uitgeschakeld</string>
+  <string name="ls_bouncer_off_summary">Open vergrendelscherm direct op pin/patroon/wachtwoord</string>
+  <string name="ls_bouncer_dismissable">Niet dismissable</string>
+  <string name="ls_bouncer_persistent">Niet persistent</string>
+  <string name="ls_bouncer_all">Geen dismissable of persistent</string>
+  <string name="lockscreen_alpha">Vergrendelscherm alpha</string>
+  <string name="lockscreen_security_alpha">Vergrendelscherm portier alpha</string>
+  <!-- Notification spamfilter -->
+  <string name="spam_added_title">Toegevoegd %1$s</string>
+  <string name="spam_last_blocked_title">Laatst geblokkeerd %1$s</string>
+  <string name="block_notifications_title">Filter notificaties</string>
+  <string name="no_filters_title">Geen filters ingesteld</string>
+  <string name="app_ops_ignored_count">Geweigerd <xliff:g id="count" example="2 times">%s </xliff:g></string>
+  <!-- Optional Dashboard Switches -->
+  <string name="dashboard_switches_title">Dashboard schakelaars</string>
+  <string name="dashboard_switches_off">Schakelaars uit</string>
+  <string name="dashboard_switches_on">Schakelaars aan</string>
+  <string name="dashboard_switches_summary">De positie van de dashboard schakelaars wijzigen</string>
+  <string name="dashboard_switches_dialog_title">Selecteer schakelaar status</string>
 </resources>
