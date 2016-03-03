@@ -81,6 +81,11 @@
         android:key="airplane"
         android:title="@string/power_menu_airplane_title"
         android:defaultValue="true" />
+    
+    <SwitchPreference
+        android:key="torch"
+        android:title="@string/powermenu_torch"
+        android:defaultValue="true" />
 
     <SwitchPreference
         android:key="users"

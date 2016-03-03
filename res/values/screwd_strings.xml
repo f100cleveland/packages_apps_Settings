@@ -241,6 +241,7 @@
     <string name="power_menu_sound_title">Sound panel</string>
     <string name="power_menu_bug_report_disabled">Bug reporting is disabled in development settings</string>
     <string name="powermenu_screenshot_delay_title">Set screenshot delay</string>
+    <string name="powermenu_torch">Torch</string>
     
     <string name="navigation_bar_left_title">Left-handed mode</string>
     <string name="navigation_bar_left_summary">Place the navigation bar on the left side of the screen in landscape mode</string>

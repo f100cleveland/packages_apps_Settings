@@ -40,6 +40,7 @@ import com.android.internal.util.cm.PowerMenuConstants;
 import com.android.settings.widget.SeekBarPreferenceCham;
 
 import static com.android.internal.util.cm.PowerMenuConstants.*;
+import com.android.internal.util.screwd.screwdUtils;
 import com.android.settings.widget.NumberPickerPreference;
 
 import java.util.Arrays;
@@ -53,6 +54,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
     private static final String SCREENSHOT_DELAY = "screenshot_delay";
 	private static final String PREF_TRANSPARENT_POWER_MENU = "transparent_power_menu";
+	private static final String POWERMENU_TORCH = "powermenu_torch";
 	
     private SwitchPreference mRebootPref;
     private SwitchPreference mScreenshotPref;
@@ -63,6 +65,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     private SwitchPreference mLockdownPref;
     private SwitchPreference mBugReportPref;
     private SwitchPreference mSilentPref;
+	private SwitchPreference mTorchPref;
     private SlimSeekBarPreference mOnTheGoAlphaPref;
 	private SeekBarPreferenceCham mPowerMenuAlpha;
   
@@ -120,6 +123,8 @@ public class PowerMenuActions extends SettingsPreferenceFragment
                 mBugReportPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_BUGREPORT);
             } else if (action.equals(GLOBAL_ACTION_KEY_SILENT)) {
                 mSilentPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SILENT);
+			} else if (action.equals(GLOBAL_ACTION_KEY_TORCH)) {
+                mTorchPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_TORCH);	
             }
         }
 
@@ -167,6 +172,14 @@ public class PowerMenuActions extends SettingsPreferenceFragment
 
         if (mScreenrecordPref != null) {
             mScreenrecordPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_SCREENRECORD));
+        }
+		
+		if (mTorchPref != null) {
+			if (!screwdUtils.deviceSupportsFlashLight(getActivity())) {
+            	mTorchPref.setEnabled(false);
+        	} else {
+        		mTorchPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_TORCH));
+			}
         }
 
         if (mAirplanePref != null) {
@@ -225,6 +238,10 @@ public class PowerMenuActions extends SettingsPreferenceFragment
         } else if (preference == mScreenrecordPref) {
             value = mScreenrecordPref.isChecked();
             updateUserConfig(value, GLOBAL_ACTION_KEY_SCREENRECORD);
+			
+		} else if (preference == mTorchPref) {
+            value = mTorchPref.isChecked();
+            updateUserConfig(value, GLOBAL_ACTION_KEY_TORCH);
 
         } else if (preference == mAirplanePref) {
             value = mAirplanePref.isChecked();
