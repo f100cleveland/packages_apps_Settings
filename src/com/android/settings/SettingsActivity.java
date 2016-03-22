@@ -114,6 +114,7 @@ import com.android.settings.notification.ZenModeSettings;
 import com.android.settings.notification.ZenModeScheduleRuleSettings;
 import com.android.settings.print.PrintJobSettingsFragment;
 import com.android.settings.print.PrintSettingsFragment;
+import com.android.settings.screwd.ScrewdSettings;
 import com.android.settings.search.DynamicIndexableContentMonitor;
 import com.android.settings.search.Index;
 import com.android.settings.sim.SimSettings;
@@ -280,6 +281,7 @@ public class SettingsActivity extends Activity
             R.id.print_settings,
             R.id.nfc_payment_settings,
             R.id.home_settings,
+			R.id.screwd_settings,
             R.id.dashboard
     };
 
@@ -358,7 +360,8 @@ public class SettingsActivity extends Activity
             WriteSettingsDetails.class.getName(),
 			com.android.settings.cyanogenmod.PrivacySettings.class.getName(),
             BlacklistSettings.class.getName(),
-            DisplayRotation.class.getName()
+            DisplayRotation.class.getName(),
+			ScrewdSettings.class.getName(),
     };
 
 
