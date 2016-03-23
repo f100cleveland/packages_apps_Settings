@@ -1452,4 +1452,8 @@
     <string name="lockscreen_vibrate_enabled_title">Vibrate</string>
     <string name="lockscreen_vibrate_enabled_head">Vibrate when unlocking</string>
     
+    <!-- Heads Up button -->
+    <string name="enable_headsup_button_extended_statusbar_title">Extended statusbar button</string>
+    <string name="enable_headsup_button_extended_statusbar_summary">Enable/Disable action for the heads up button in the expanded statusbar area</string>
+    
 </resources>
