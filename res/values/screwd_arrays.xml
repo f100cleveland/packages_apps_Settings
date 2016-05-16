@@ -316,7 +316,7 @@
     <string-array name="icon_types">
         <item>@string/shortcuts_icon_default</item>
         <item>@string/shortcuts_icon_presets</item>
-        <!--<item>@string/shortcuts_icon_custom</item>-->
+        <item>@string/shortcuts_icon_custom</item>
     </string-array>
 
     <string-array name="shortcut_icon_picker_labels">
@@ -466,6 +466,7 @@
     <string-array name="shortcut_action_values" translatable="false">
         <item>**back**</item>
         <item>**app**</item>
+	<item>**floating_windows**</item>
         <item>**home**</item>
         <item>**kill**</item>
         <item>**lastapp**</item>

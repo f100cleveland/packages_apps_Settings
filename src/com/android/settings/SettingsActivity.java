@@ -71,6 +71,9 @@ import com.android.settings.accessibility.CaptionPropertiesFragment;
 import com.android.settings.accounts.AccountSettings;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.applications.DrawOverlayDetails;
+import com.android.settings.screwd.HeadsUpSettings;
+import com.android.settings.paranoid.PieControl;
+import com.android.settings.screwd.FloatingWindows;
 import com.android.settings.applications.InstalledAppDetails;
 import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ManageAssist;
@@ -360,8 +363,11 @@ public class SettingsActivity extends Activity
             WriteSettingsDetails.class.getName(),
 			com.android.settings.cyanogenmod.PrivacySettings.class.getName(),
             BlacklistSettings.class.getName(),
+	    PieControl.class.getName(),
             DisplayRotation.class.getName(),
 			ScrewdSettings.class.getName(),
+	    FloatingWindows.class.getName(),
+            HeadsUpSettings.class.getName()
     };
 
 

@@ -123,4 +123,5 @@ public class Settings extends SettingsActivity {
 	public static class BlacklistSettingsActivity extends SettingsActivity { /* empty */ }
 	public static class ScrewdSettingsActivity extends SettingsActivity { /* empty */ }
 	public static class HeadsUpSettingsActivity extends SettingsActivity { /* empty */ }
+	public static class FloatingWindowsSettingsActivity extends SettingsActivity { /* empty */ }
 }
